@@ -1,0 +1,4700 @@
+
+<html>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<head>
+		<title>Calculadora de Prescri&ccedil;&atilde;o da Pretens&atilde;o Execut&oacute;ria</title>
+		<style type="text/css">
+			.corpo        
+			{ 
+				background-color: #FFFFFF; 
+				position: absolute;
+				margin-left: 0; 
+				margin-top: 0; 
+				margin-width: 0; 
+				margin-height: 0; 
+				margin-padding: 0; 
+				scrollbar-arrow-color: #3E6A51;
+				scrollbar-base-color: #3E6A51;
+				scrollbar-dark-shadow-color: #E6E5E3;
+				scrollbar-track-color: #E6E5E3;
+				scrollbar-face-color: #E6E5E3;
+				scrollbar-shadow-color: #E6E5E3;
+				scrollbar-highlight-color: #E6E5E3;
+				scrollbar-3d-light-color: #E6E5E3;
+				
+			}
+			.tituloSecoes 
+			{
+				font-family: verdana;
+				font-size: 12px;
+				font-weight: bold;
+				color: #3E6A51;
+				border-bottom-width: 1px;
+				border-left-width: thick;
+				border-top-style: none;
+				border-right-style: solid;
+				border-right-width: thick;	
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-bottom-color: #666666;
+				border-left-color: #3E6A51;
+				border-right-color: #3E6A51;	
+				text-indent: 5pt;
+				vertical-align: middle;
+			}
+			.itemTabela 
+			{
+				font-weight: bold;
+				font-family: verdana;
+				font-size: 11px;
+				color: #000000;
+				text-indent: 5pt;
+			}
+			.linhaFundoTabela 
+			{
+				border-bottom-width: 0px;
+				border-bottom-style: solid;
+				border-bottom-color: #333333;
+				cellpadding : 10px; 
+				cellspacing : 10px;	
+				width : 100%;				
+			}
+			.tabelaCabecalho
+			{
+				width : 100%;
+			}
+			.tabelaLista
+			{
+				width : 100%;
+				cellpadding : 0; 
+				cellspacing : 0;	
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+				border-bottom-color: #333333;
+			}
+			.tabelaPaginacao
+			{
+				width : 100%;
+			}
+
+			.textoComum 
+			{
+				font-family: verdana;
+				font-family: verdana;
+				font-size: 12px;
+				color: #000000;
+			}
+			.paragrafo01 
+			{			
+				font-weight: bold;			
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				text-align:right;
+
+			}
+			.paragrafo02 
+			{
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				text-align:left;
+
+			}
+			.paragrafo03 
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 10px;
+				color: #5173F9;
+				text-align:right;
+
+			}
+			.paragrafo04 
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 10px;
+				color: #5173F9;
+				text-align:left;
+
+			}
+			.paragrafo04red 
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 10px;
+				color: #DB043A;
+				text-align:left;
+
+			}
+			
+			.paragrafo05
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: times;
+				font-size: 16px;
+				text-align:center;
+				border: 0px;	
+			}
+			.paragrafo06
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 12px;
+				color: #F27A0D;
+				text-align:right;
+			}
+			.paragrafo07
+			{
+				font-weight: bold;
+				text-indent: 2pt;
+				font-family: verdana;
+				font-size: 14px;
+				color: #F27A0D;
+				text-align:left;
+			}
+
+			
+			
+			input.formularioObrigatorio 
+			{
+				background-Color: #CBE1D5;
+			}
+			
+		
+			a:link       
+			{ 
+				color: #008080; 
+				text-decoration: underline 
+			}
+			a:visited 
+			{
+				color: #008080; 
+				text-decoration: underline 
+			}
+			a:active 
+			{
+				color: #008080; 
+				text-decoration: underline 
+			}
+
+			.tituloSubBSecao 
+			{ 
+				font-family: verdana; 
+				font-size: 10px; 
+				font-weight: bold; 
+				color: #3E6A51; 
+				text-align: left; 
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+				border-bottom-color: #333333;
+
+			}
+			.textoComumCentral 
+			{
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				text-align: center;
+			}
+			.linhaTabela {
+				background-Color: #3E6A51;
+				font-family: verdana;
+				font-size: 10px;
+				font-weight: bold;
+				color: #FFFFFF;
+				text-align: left;
+			}
+			a:hover {
+				color: #666666;
+				text-decoration: underline;
+			}
+			.botao {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: normal;
+				color: #3E6A51;
+				background-color: #E1EAE5;
+				border-top-width: 0px;
+				border-right-width: 0px;
+				border-bottom-width: 0px;
+				border-left-width: 0px;
+			}
+			.botao2 {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: bold;
+				color: #3E6A51;
+				background-color: #E1EAE5;
+				border-top-width: 0px;
+				border-right-width: 0px;
+				border-bottom-width: 0px;
+				border-left-width: 0px;
+			}
+
+			.divisao {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: bold;
+				color: #3E6A51;
+				background-color: #E1EAE5;
+				border-top-width: 0px;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
+				border-left-width: 2px;
+				border-top-style: solid;
+				border-right-style: solid;
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-top-color: #008080;
+				border-right-color: #008080;
+				border-bottom-color: #008080;
+				border-left-color: #008080;
+			}
+			.celula {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: normal;
+				color: #3E6A51;
+				background-color: #E1EAE5;
+				border-top-width: 1px;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
+				border-left-width: 1px;
+				border-top-style: solid;
+				border-right-style: solid;
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-top-color: #008080;
+				border-right-color: #008080;
+				border-bottom-color: #008080;
+				border-left-color: #008080;
+			}
+			.celula2 {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: normal;
+				color: #3E6A51;
+				background-color: #E1EAE5;
+				border-top-width: 1px;
+				border-right-width: 1px;
+				border-bottom-width: 0px;
+				border-left-width: 1px;
+				border-top-style: solid;
+				border-right-style: solid;
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-top-color: #008080;
+				border-right-color: #008080;
+				border-bottom-color: #008080;
+				border-left-color: #008080;
+			}
+			.celulaFinal {
+				font-family: verdana;
+				font-size: 11px;
+				font-weight: bold;
+				color: #660000;
+				background-color: #E1EAE5;
+				border-top-width: 0px;
+				border-right-width: 0px;
+				border-bottom-width: 1px;
+				border-left-width: 2px;
+				border-top-style: solid;
+				border-right-style: solid;
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-top-color: #008080;
+				border-right-color: #008080;
+				border-bottom-color: #008080;
+				border-left-color: #008080;
+			}
+
+			.titulocelula {
+				font-family: verdana;
+				font-size: 11px;
+				color: #000000;
+				border-right-style: solid;
+				border-top-color: #3E6A51;
+				border-right-color: #3E6A51;
+				border-bottom-color: #3E6A51;
+				border-left-color: #3E6A51;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+			}
+			.links {
+				font-family: verdana;
+				font-size: 11px;
+				color: #D50000;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			.formularios 
+			{
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				border: 0px;
+				border: 1px solid #000000;
+				background-Color: #FFFFFF;
+			}
+
+			.formularioObrigatorio 
+			{
+				font-family: verdana;
+				font-size: 10px;
+				color: #000000;
+				border: 1px solid #000000;
+				background-Color: #CDE6F3;
+			}
+			  
+			.body {
+				color: purple;
+				background-color: #d8da3d 
+			}
+
+			
+				
+			@media print {
+				.imprimir { display: block; }
+				.nao_imprimir { display: none; }
+			}
+
+			
+			#caixaAjuda
+			{ 
+				position:absolute;
+				top: 0;
+				background-color: lightyellow;
+				width: 150px; 
+				padding: 3px;
+				border:1px solid #CC9933;
+				font:normal 11px Verdana;
+				line-height:18px;
+				z-index:100;
+				border-right: 1px solid #CC9933;
+				border-bottom: 1px solid #CC9933;
+				visibility: hidden;
+			}
+
+		</style>
+		
+		<!-- CLASSES DE AJUDA -->
+		<script>
+			var horizontal_offset="9px" ;
+			var vertical_offset="0";
+			var ie=document.all;
+			var ns6=document.getElementById&&!document.all;
+
+			function buscarPosicaoOffset(what, offsettype)
+			{
+				var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+				var parentEl=what.offsetParent;
+				while (parentEl!=null)
+				{
+					totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+					parentEl=parentEl.offsetParent;
+				}
+				return totaloffset;
+			}
+
+			function ehCompativelIE()
+			{
+				return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+			}
+
+			function limparCantoBrowser(obj, whichedge)
+			{
+				var edgeoffset=(whichedge=="rightedge")? parseInt(horizontal_offset)*-1 : parseInt(vertical_offset)*-1;
+				if (whichedge=="rightedge")
+				{
+					var windowedge=ie && !window.opera? ehCompativelIE().scrollLeft+ehCompativelIE().clientWidth-30 : window.pageXOffset+window.innerWidth-40;
+					dropmenuobj.contentmeasure=dropmenuobj.offsetWidth;
+					if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+						edgeoffset=dropmenuobj.contentmeasure+obj.offsetWidth+parseInt(horizontal_offset);
+				}
+				else
+				{
+					var windowedge=ie && !window.opera? ehCompativelIE().scrollTop+ehCompativelIE().clientHeight-15 : window.pageYOffset+window.innerHeight-18;
+					dropmenuobj.contentmeasure=dropmenuobj.offsetHeight;
+					if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure)
+						edgeoffset=dropmenuobj.contentmeasure-obj.offsetHeight;
+				}
+				return edgeoffset;
+			}
+
+			function mostrarHint(menucontents, obj, e, tipwidth)
+			{
+				if ((ie||ns6) && document.getElementById("caixaAjuda"))
+				{
+					dropmenuobj=document.getElementById("caixaAjuda");
+					dropmenuobj.innerHTML=menucontents;
+					dropmenuobj.style.left=dropmenuobj.style.top=-500;
+					if (tipwidth!="")
+					{
+						dropmenuobj.widthobj=dropmenuobj.style;
+						dropmenuobj.widthobj.width=tipwidth;
+					}
+					dropmenuobj.x=buscarPosicaoOffset(obj, "left");
+					dropmenuobj.y=buscarPosicaoOffset(obj, "top");
+					dropmenuobj.style.left=dropmenuobj.x-limparCantoBrowser(obj, "rightedge")+obj.offsetWidth+"px";
+					dropmenuobj.style.top=dropmenuobj.y-limparCantoBrowser(obj, "bottomedge")+"px";
+					dropmenuobj.style.visibility="visible";
+					obj.onmouseout=esconderDica;
+				}
+			}
+
+			function esconderDica(e)
+			{
+				dropmenuobj.style.visibility="hidden";
+				dropmenuobj.style.left="-500px";
+			}
+
+			function criarCaixaDica()
+			{
+				var divblock=document.createElement("div");
+				divblock.setAttribute("id", "caixaAjuda");
+				document.body.appendChild(divblock);
+			}
+
+			if (window.addEventListener)
+				window.addEventListener("load", criarCaixaDica, false);
+			else if (window.attachEvent)
+				window.attachEvent("onload", criarCaixaDica);
+			else if (document.getElementById)
+				window.onload=criarCaixaDica;
+
+		</script>
+		
+		<!-- CLASSES DE NEG�CIO -->
+		<script>
+	
+			function EventoCriminal(dataReferencia, tipoEvento, evento)
+			{
+				this.dataReferencia = dataReferencia;
+				this.tipoEvento = tipoEvento;
+				this.evento = evento;
+			}
+	
+			// Classe Calculadora Prescricao
+			function CalculadoraPrescricao()
+			{
+				this.nomeSentenciado = '';
+				this.numeroExecucao = '';
+				this.dataNascimento = null;
+				
+				this.dataInicioCumprimento = null;
+				
+				this.sentenciadoPreso = '';
+
+				var listaDetracao = new Array();
+				listaDetracao[0] = new Periodo(null, null, null);
+				this.listaDetracao = listaDetracao;
+
+				var listaInterrupcao = new Array();
+				listaInterrupcao[0] = new Periodo(null, null, null);
+				this.listaInterrupcao = listaInterrupcao;
+				
+				this.dataUltimaFuga = null;
+
+				var listaRemicao = new Array();
+				listaRemicao[0] = new Remicao(0);
+				this.listaRemicao = listaRemicao;
+				
+				this.dataBase = null;
+				
+				this.anoMesDiaTotalPenaCumprida = new AnoMesDia(0, 0, 0);
+
+				var listaCondenacao = new Array();
+				
+				listaCondenacao[0]= new Condenacao(1, null, '', null, null, false, '', new AnoMesDia(0,0,0), null, null, '');
+				
+				this.listaCondenacao = listaCondenacao;
+							
+				this.calcularTotalDetracao = function()
+				{
+					var anoMesDiaTotalDetracao = new AnoMesDia(0, 0, 0);
+					
+					for (var i = 0; i < this.listaDetracao.length; i++)
+					{
+						if (this.listaDetracao[i].dataInicio != null && this.listaDetracao[i].dataFim!=null)
+						{
+							var anoMesDiaTemp = calcularDiferencaData(this.listaDetracao[i].dataInicio, this.listaDetracao[i].dataFim);
+							
+							if (anoMesDiaTemp != null)
+							{
+								anoMesDiaTemp.dia += 1;
+								anoMesDiaTotalDetracao = somarAnoMesDia(anoMesDiaTotalDetracao, anoMesDiaTemp);
+							}	
+						}
+					}
+					
+					return anoMesDiaTotalDetracao;
+				}
+				
+				
+				this.calcularTotalInterrupcao = function()
+				{
+					var anoMesDiaTotalInterrupcao = new AnoMesDia(0, 0, 0);
+					
+					for (var i = 0; i < this.listaInterrupcao.length; i++)
+					{
+						if (this.listaInterrupcao[i].dataInicio != null && this.listaInterrupcao[i].dataFim!=null)
+						{
+							var anoMesDiaTemp = calcularDiferencaData(this.listaInterrupcao[i].dataInicio, this.listaInterrupcao[i].dataFim);
+							anoMesDiaTotalInterrupcao = somarAnoMesDia(anoMesDiaTotalInterrupcao, anoMesDiaTemp);
+						}
+					}
+					
+					return anoMesDiaTotalInterrupcao;
+				}
+				
+				this.calcularTotalRemicao = function() 
+				{
+					var totalDiasRemicao = new Number(0);
+					
+					for (var i = 0; i < this.listaRemicao.length; i++)
+					{
+						totalDiasRemicao += this.listaRemicao[i].qtdDia;
+					}
+					
+					return totalDiasRemicao;
+				}
+				
+				
+				this.calcularPenaCumpridaCadaCondenacao = function()
+				{
+
+					var listaEventoCriminalOrdenado = new Array();
+					var contadorEventoCriminal = 0;
+					
+					if (this.sentenciadoPreso == 'preso_sim')
+					{
+						var dataPrisaoDefinitiva = this.dataInicioCumprimento;
+						var eventoCriminalPrisaoDefinitiva = new EventoCriminal(dataPrisaoDefinitiva, 'PRISAO_DEFINITIVA', null);
+						listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalPrisaoDefinitiva;
+						contadorEventoCriminal++;
+					}	
+					
+					if (this.sentenciadoPreso == 'preso_sim')
+					{
+						var dataUltimaFuga = this.dataUltimaFuga;
+						var eventoCriminalDataUltimaFuga = new EventoCriminal(dataUltimaFuga, 'ULTIMA_FUGA', null);
+						listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalDataUltimaFuga;
+						contadorEventoCriminal++;
+					}
+					
+
+
+					for (var i = 0; i < this.listaInterrupcao.length; i++)
+					{
+						if (this.listaInterrupcao[i].dataInicio != null && this.listaInterrupcao[i].dataFim != null)
+						{
+							var eventoCriminalFuga = new EventoCriminal(this.listaInterrupcao[i].dataInicio, 'FUGA', this.listaInterrupcao[i]);
+							listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalFuga;
+							contadorEventoCriminal++;
+
+							var eventoCriminalRecaptura = new EventoCriminal(this.listaInterrupcao[i].dataFim, 'RECAPTURA', this.listaInterrupcao[i]);
+							listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalRecaptura;
+							contadorEventoCriminal++;
+						}
+					}
+					
+					for (var i = 0; i < this.listaCondenacao.length; i++)
+					{
+					
+					
+						var condenacaoTemp = this.listaCondenacao[i];
+						condenacaoTemp.anoMesDiaPenaCumprida = new AnoMesDia(0, 0, 0);
+						
+						if (this.listaCondenacao.length == 1)
+						{
+							// j� inicio as condenacoes com as detra�oes cumpridas sem valida��o
+							for (var j = 0; j < this.listaDetracao.length; j++)
+							{
+								var detracaoTemp = this.listaDetracao[j];
+								condenacaoTemp.anoMesDiaPenaCumprida = detracaoTemp.calcularPeriodoEmAnoMesDia();
+								detracaoTemp.condenacaoAssociada = condenacaoTemp;
+							}
+						}
+						else
+						{
+							// j� inicio as condenacoes com as detra�oes cumpridas sem valida��o
+							for (var j = 0; j < this.listaDetracao.length; j++)
+							{
+								var detracaoTemp = this.listaDetracao[j];
+								if (detracaoTemp.descricao != null && detracaoTemp.descricao != '')
+								{
+									if (condenacaoTemp.descricaoProcesso == detracaoTemp.descricao)
+									{
+										condenacaoTemp.anoMesDiaPenaCumprida = detracaoTemp.calcularPeriodoEmAnoMesDia();
+										detracaoTemp.condenacaoAssociada = condenacaoTemp;
+									}
+								}
+							}
+						}	
+						
+						if (condenacaoTemp.dataCondenacao != null && condenacaoTemp.gravidade != null)
+						{
+							var eventoCriminal = new EventoCriminal(condenacaoTemp.dataCondenacao, 'CONDENACAO', condenacaoTemp);
+							listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminal;
+							contadorEventoCriminal++;
+						}
+					}
+					
+					for (var i = 0; i < this.listaDetracao.length; i++)
+					{
+						var detracaoTemp = this.listaDetracao[i];
+						if (detracaoTemp.dataInicio != null && detracaoTemp.dataFim != null && detracaoTemp.condenacaoAssociada == null)
+						{
+							var eventoCriminalPrisaoProvisoria = new EventoCriminal(detracaoTemp.dataInicio, 'PRISAO_PROVISORIA', detracaoTemp);
+							eventoCriminalPrisaoProvisoria.penaImposta = this.listaCondenacao[0].anoMesDiaPenaImposta;
+							listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalPrisaoProvisoria;
+							contadorEventoCriminal++;
+
+							var eventoCriminalLiberdadeProvisoria = new EventoCriminal(detracaoTemp.dataFim, 'LIBERDADE_PROVISORIA', detracaoTemp);
+							listaEventoCriminalOrdenado[contadorEventoCriminal] = eventoCriminalLiberdadeProvisoria;
+							contadorEventoCriminal++;
+						}
+					}
+
+
+					var ordenado = false;
+					while (ordenado == false)
+					{
+						ordenado = true;
+						for (var i = 0; i < listaEventoCriminalOrdenado.length - 1; i++)
+						{
+
+							if (listaEventoCriminalOrdenado[i].dataReferencia != null && listaEventoCriminalOrdenado[i+1].dataReferencia != null)
+							{
+								if (listaEventoCriminalOrdenado[i].dataReferencia.valueOf() >  listaEventoCriminalOrdenado[i + 1].dataReferencia.valueOf())
+								{
+									var eventoCriminalTemp = listaEventoCriminalOrdenado[i];
+									listaEventoCriminalOrdenado[i] = listaEventoCriminalOrdenado[i+1];
+									listaEventoCriminalOrdenado[i+1] = eventoCriminalTemp;
+									ordenado = false;
+								}
+								else if (listaEventoCriminalOrdenado[i].dataReferencia.valueOf() ==  listaEventoCriminalOrdenado[i + 1].dataReferencia.valueOf())
+								{
+									// se for a mesma data e antes aparecer fuga, deve se trocar a ordem
+									if (listaEventoCriminalOrdenado[i+1].tipoEvento == 'CONDENACAO' && listaEventoCriminalOrdenado[i].tipoEvento == 'FUGA')
+									{
+										var eventoCriminalTemp = listaEventoCriminalOrdenado[i];
+										listaEventoCriminalOrdenado[i] = listaEventoCriminalOrdenado[i+1];
+										listaEventoCriminalOrdenado[i+1] = eventoCriminalTemp;
+										ordenado = false;
+									}
+									// se for condenacao e recaptura depois, trocar a ordem
+									else if (listaEventoCriminalOrdenado[i].tipoEvento == 'CONDENACAO' && listaEventoCriminalOrdenado[i+1].tipoEvento == 'RECAPTURA')
+									{
+										var eventoCriminalTemp = listaEventoCriminalOrdenado[i];
+										listaEventoCriminalOrdenado[i] = listaEventoCriminalOrdenado[i+1];
+										listaEventoCriminalOrdenado[i+1] = eventoCriminalTemp;
+										ordenado = false;
+									}
+								
+								}
+							}	
+						}
+					}
+
+
+					if (this.sentenciadoPreso == 'preso_sim')
+					{
+						// SALDO DE PENA CUMPRIDA
+						// Vou guardar todas as condenacoes conforme vao aparecendo e calcular a pena cumprida de cada um
+						var listaCondenacaoGravidade = new Array();
+						var penaCumpridaAcumulada = new AnoMesDia(0, 0, this.calcularTotalRemicao() + 1);
+						var indiceCondenacaoGravidade = 0;
+						
+						for (var i = 0; i < listaEventoCriminalOrdenado.length; i++)
+						{
+							var eventoOrdenado = listaEventoCriminalOrdenado[i];
+							var eventoAnterior = null;
+							if (i > 0)
+							{
+								eventoAnterior = listaEventoCriminalOrdenado[i-1];
+							}
+							
+							if (i == 0)
+							{
+								// CONDENACAO -- FAZER ALGORITMO	
+								if (eventoOrdenado.tipoEvento == 'CONDENACAO')
+								{
+									// Busca a condenacao atual
+									var condenacaoAtual = eventoOrdenado.evento;
+									
+									// Inclui a condenacao na linha do tempo
+									// inclui as remicoes...
+									penaCumpridaAcumulada = distribuirPenaCumprida(listaCondenacaoGravidade, penaCumpridaAcumulada);
+									//penaCumpridaAcumulada = new AnoMesDia(0, 0, 0);
+									listaCondenacaoGravidade[indiceCondenacaoGravidade] = condenacaoAtual;
+									indiceCondenacaoGravidade++;
+								}
+								
+							}
+							else
+							{
+								if (eventoOrdenado.tipoEvento == 'FUGA' || eventoOrdenado.tipoEvento == 'LIBERDADE_PROVISORIA')
+								{
+									// soma a pena cumprida da prisao provisoria at� a liberdade provisoria
+									penaCumpridaAcumulada = somarAnoMesDia(penaCumpridaAcumulada, calcularDiferencaData(eventoAnterior.dataReferencia, eventoOrdenado.dataReferencia));
+								}
+								// CONDENACAO -- FAZER ALGORITMO
+								else if (eventoOrdenado.tipoEvento == 'CONDENACAO')
+								{
+									// Busca a condenacao atual
+									var condenacaoAtual = eventoOrdenado.evento;
+									
+									if (eventoAnterior.tipoEvento != 'FUGA')
+									{
+										penaCumpridaAcumulada = somarAnoMesDia(penaCumpridaAcumulada, calcularDiferencaData(eventoAnterior.dataReferencia, eventoOrdenado.dataReferencia));
+									}	
+									
+									penaCumpridaAcumulada = distribuirPenaCumprida(listaCondenacaoGravidade, penaCumpridaAcumulada);
+									//penaCumpridaAcumulada = new AnoMesDia(0, 0, 0);
+									listaCondenacaoGravidade[indiceCondenacaoGravidade] = condenacaoAtual;
+									indiceCondenacaoGravidade++;
+								}
+								else if (eventoOrdenado.tipoEvento == 'ULTIMA_FUGA')
+								{
+									penaCumpridaAcumulada = somarAnoMesDia(penaCumpridaAcumulada, calcularDiferencaData(eventoAnterior.dataReferencia, eventoOrdenado.dataReferencia));
+
+									penaCumpridaAcumulada = distribuirPenaCumprida(listaCondenacaoGravidade, penaCumpridaAcumulada);
+								}
+								// PRISAO PROVISORIA _ LIBERDADE PROVISORIA
+							}
+						}
+					}	
+
+					this.listaEventoCriminal = listaEventoCriminalOrdenado;
+				}
+				
+				this.calcularDataValidade = function() 
+				{
+
+					var listaPrazoPrescricional = new Array();	
+
+					listaPrazoPrescricional[0] = new PrazoPrescricional(new AnoMesDia(0, 0, 0), new AnoMesDia(1, 0, 0), new AnoMesDia(2, 0, 0), new Date(2010, 4, 6, 12, 0, 0, 0));
+					listaPrazoPrescricional[1] = new PrazoPrescricional(new AnoMesDia(0, 0, 0), new AnoMesDia(1, 0, 0), new AnoMesDia(3, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));					
+					listaPrazoPrescricional[2] = new PrazoPrescricional(new AnoMesDia(1, 0, 0), new AnoMesDia(2, 0, 0), new AnoMesDia(4, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));
+					listaPrazoPrescricional[3] = new PrazoPrescricional(new AnoMesDia(2, 0, 0), new AnoMesDia(4, 0, 0), new AnoMesDia(8, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));
+					listaPrazoPrescricional[4] = new PrazoPrescricional(new AnoMesDia(4, 0, 0), new AnoMesDia(8, 0, 0), new AnoMesDia(12, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));
+					listaPrazoPrescricional[5] = new PrazoPrescricional(new AnoMesDia(8, 0, 0), new AnoMesDia(12, 0, 0), new AnoMesDia(16, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));
+					listaPrazoPrescricional[6] = new PrazoPrescricional(new AnoMesDia(12, 0, 0), new AnoMesDia(999, 0, 0), new AnoMesDia(20, 0, 0), new Date(2100, 0, 1, 12, 0, 0, 0));
+					
+					this.dataBase = this.dataInicioCumprimento;
+					
+					// descobrir ultima fuga
+					var dataUltimaFuga = this.dataUltimaFuga;
+					/*for (var i = 0; i < this.listaInterrupcao.length; i++)
+					{
+						if ((dataUltimaFuga == null || dataUltimaFuga < this.listaInterrupcao[i].dataInicio) && this.listaInterrupcao[i].dataFim == null) 
+						{
+							dataUltimaFuga = this.listaInterrupcao[i].dataInicio;
+						}
+					}*/
+					
+					
+
+					if (this.sentenciadoPreso == 'preso_sim')					
+					{
+						// Esta variavel guarda o total de pena cumprida					
+						var anoMesDiaPenaRestanteTemp = new AnoMesDia(0,0,this.calcularTotalRemicao());
+						if (dataUltimaFuga != null)
+						{
+							this.dataBase = dataUltimaFuga;
+							anoMesDiaPenaRestanteTemp = somarAnoMesDia(anoMesDiaPenaRestanteTemp, calcularDiferencaData(this.dataInicioCumprimento, dataUltimaFuga));
+						}
+						anoMesDiaPenaRestanteTemp = subtrairAnoMesDia(anoMesDiaPenaRestanteTemp, this.calcularTotalInterrupcao());
+						anoMesDiaPenaRestanteTemp = somarAnoMesDia(anoMesDiaPenaRestanteTemp, this.calcularTotalDetracao());
+						anoMesDiaPenaRestanteTemp = somarAnoMesDia(anoMesDiaPenaRestanteTemp, new AnoMesDia(0, 0, 1));
+						this.anoMesDiaTotalPenaCumprida = new AnoMesDia(anoMesDiaPenaRestanteTemp.ano, anoMesDiaPenaRestanteTemp.mes, anoMesDiaPenaRestanteTemp.dia);
+					}
+					else
+					{
+						var anoMesDiaPenaRestanteTemp = this.calcularTotalDetracao();
+						this.anoMesDiaTotalPenaCumprida = new AnoMesDia(anoMesDiaPenaRestanteTemp.ano, anoMesDiaPenaRestanteTemp.mes, anoMesDiaPenaRestanteTemp.dia);
+						
+					}
+
+					
+					for (var i = 0; i < this.listaCondenacao.length; i++)
+					{
+						var condenacao = this.listaCondenacao[i];
+					
+						// idade na data do fato
+						var idadeDataFato = null;
+						var idadeDataSentenca = null;
+						var idade70Anos = new AnoMesDia(70, 0, 0);
+						var idade21Anos = new AnoMesDia(21, 0, 0);
+						var temMenos21AnosFato = false;
+						var tem70AnosSentenca = false;
+						
+						if (condenacao.dataFato != null && this.dataNascimento != null)
+						{
+							idadeDataFato = calcularDiferencaData(this.dataNascimento, condenacao.dataFato);
+						
+							if (idadeDataFato != null && idadeDataFato.converterEmDias() < idade21Anos.converterEmDias())
+							{
+								temMenos21AnosFato = true;	
+							}
+						}
+						if (condenacao.dataSentenca != null && this.dataNascimento != null)
+						{
+							idadeDataSentenca = calcularDiferencaData(this.dataNascimento, condenacao.dataSentenca);
+							
+							if (idadeDataSentenca != null && idadeDataSentenca.converterEmDias() >= idade70Anos.converterEmDias())
+							{
+								tem70AnosSentenca = true;	
+							}
+						}
+					
+						
+						var anoMesDiaPenaImposta = condenacao.anoMesDiaPenaImposta;
+						var anoMesDiaPrazoPrescricional = new AnoMesDia(0, 0, 0);
+						var anoMesDiaPrazoPrescricionalSentenca = new AnoMesDia(0, 0, 0);
+						
+						if (compararAnoMesDia(anoMesDiaPenaImposta, new AnoMesDia(0, 0, 0)))
+						{
+							continue;
+						}
+						
+						// Calcula para cada pena o restante desta pena
+						if (compararAnoMesDiaMaiorQueOutroAnoMesDia(condenacao.anoMesDiaPenaImposta, anoMesDiaPenaRestanteTemp))
+						{
+							anoMesDiaPenaRestanteTemp = new AnoMesDia(0,0,0);
+						}
+						else
+						{
+							anoMesDiaPenaRestanteTemp = subtrairAnoMesDia(anoMesDiaPenaRestanteTemp, condenacao.anoMesDiaPenaImposta);
+						}
+						
+						// Calcula normalmente com a data do fato		
+						for (var j = 0; j < listaPrazoPrescricional.length; j++)
+						{
+							if (verificarSePenaEstaDentroDoIntervalo(condenacao.calcularPenaRestante(), listaPrazoPrescricional[j]))
+							{
+								if ((anoMesDiaPrazoPrescricional == null || anoMesDiaPrazoPrescricional.converterEmDias() == 0) && condenacao.dataFato.valueOf() < listaPrazoPrescricional[j].dataFimVigencia)
+								{
+									anoMesDiaPrazoPrescricional = listaPrazoPrescricional[j].anoMesDiaPrazoPrescricional;
+								}	
+							}
+						}
+						
+						if (idadeDataFato == null || idadeDataFato.converterEmDias() == 0)	
+						{
+							if (condenacao.ehReincidente == false && (condenacao.faixaEtaria == 'menor21' || condenacao.faixaEtaria == 'maior70'))
+							{
+								anoMesDiaPrazoPrescricional = calcularFracao(anoMesDiaPrazoPrescricional, 1, 2);
+							}
+							
+							if (condenacao.ehReincidente == true &&  (condenacao.faixaEtaria != 'menor21' && condenacao.faixaEtaria != 'maior70'))
+							{
+								anoMesDiaPrazoPrescricional =  calcularFracao(anoMesDiaPrazoPrescricional, 4, 3);
+							}
+
+							if (condenacao.ehReincidente == true &&  (condenacao.faixaEtaria == 'menor21' || condenacao.faixaEtaria == 'maior70'))
+							{
+								anoMesDiaPrazoPrescricional = calcularFracao(anoMesDiaPrazoPrescricional, 4, 6);
+							}
+						}
+						else
+						{
+							if (condenacao.ehReincidente == false && (temMenos21AnosFato || tem70AnosSentenca))
+							{
+								anoMesDiaPrazoPrescricional = calcularFracao(anoMesDiaPrazoPrescricional, 1, 2);
+								
+								if (anoMesDiaPrazoPrescricionalSentenca != null && anoMesDiaPrazoPrescricionalSentenca.converterEmDias() > 0)
+								{
+									anoMesDiaPrazoPrescricionalSentenca = calcularFracao(anoMesDiaPrazoPrescricionalSentenca, 1, 2);
+								}	
+							}
+							
+							if (condenacao.ehReincidente == true &&  (temMenos21AnosFato == false && tem70AnosSentenca == false))
+							{
+								anoMesDiaPrazoPrescricional =  calcularFracao(anoMesDiaPrazoPrescricional, 4, 3);
+							}
+
+							if (condenacao.ehReincidente == true &&  (temMenos21AnosFato || tem70AnosSentenca))
+							{
+								anoMesDiaPrazoPrescricional = calcularFracao(anoMesDiaPrazoPrescricional, 4, 6);
+								
+								if (anoMesDiaPrazoPrescricionalSentenca != null && anoMesDiaPrazoPrescricionalSentenca.converterEmDias() > 0)
+								{
+									anoMesDiaPrazoPrescricionalSentenca = calcularFracao(anoMesDiaPrazoPrescricionalSentenca, 4, 6);
+								}	
+							}
+						}	
+
+						
+						var dataValidade = null;
+						var dataValidadeSentenca = null;
+						
+						if (this.sentenciadoPreso == 'preso_sim')	
+						{
+							dataValidade = somarAnoMesDiaAData(this.dataBase, anoMesDiaPrazoPrescricional);
+						}
+						else
+						{
+							dataValidade = somarAnoMesDiaAData(condenacao.dataCondenacao, anoMesDiaPrazoPrescricional);
+						}
+
+						condenacao.dataValidade = dataValidade;
+						condenacao.anoMesDiaPrazoPrescricional = anoMesDiaPrazoPrescricional;
+							
+						// Diminui 1 dia, devido ao primeiro dia de condena&ccedil;&atilde;o que deve ser contado
+						condenacao.dataValidade.setDate(condenacao.dataValidade.getDate() - 1);
+						
+						dataAtual = new Date();						
+						if (compararAnoMesDia(condenacao.calcularPenaRestante(), new AnoMesDia(0,0,0)))
+						{
+							condenacao.situacao = 'Cumprida';
+							condenacao.dataValidade = null;
+						}
+						else if (condenacao.dataValidade <= dataAtual)
+						{
+							condenacao.situacao = 'Prescrita';
+						}
+						else
+						{
+							condenacao.situacao = 'V&aacute;lida';
+						}
+					}	
+				}
+				
+				this.calcularDataProvavelPrescricaoPena = function()
+				{
+					var dataProvavelPrescricaoPena = null;
+					for (var i = 0; i < this.listaCondenacao.length; i++)
+					{						
+						if (this.listaCondenacao[i].dataValidade != null && (dataProvavelPrescricaoPena == null || this.listaCondenacao[i].dataValidade > dataProvavelPrescricaoPena))
+						{
+							dataProvavelPrescricaoPena = this.listaCondenacao[i].dataValidade;
+						}
+					}
+					return dataProvavelPrescricaoPena;
+				}
+
+			}
+			
+			function Remicao(qtdDia)
+			{
+				this.qtdDia = qtdDia;
+			}
+			
+			
+			function Periodo(dataInicio, dataFim, descricao)
+			{
+				this.dataInicio = dataInicio;
+				this.dataFim = dataFim;
+				this.descricao = descricao;
+				this.condenacaoAssociada = null;
+				
+				this.calcularPeriodoEmAnoMesDia = function()
+				{
+					if (this.dataInicio != null &&  this.dataFim != null)
+					{
+						return calcularDiferencaData(this.dataInicio, this.dataFim);
+					}	
+				}
+			}	
+			
+			function PrazoPrescricional(anoMesDiaInicio, anoMesDiaFim, anoMesDiaPrazoPrescricional, dataFimVigencia)
+			{
+				this.anoMesDiaInicio = anoMesDiaInicio;
+				this.anoMesDiaFim = anoMesDiaFim;
+				this.anoMesDiaPrazoPrescricional = anoMesDiaPrazoPrescricional;
+				this.dataFimVigencia = dataFimVigencia;
+			}
+			
+			// Classe Condenacao
+			// Parametros
+				// gravidade
+				// descricaoProcesso
+				// dataFato
+				// ehReincidente
+				// idadeCondenacao
+				// anoMesDiaPenaImposta
+				// dataFim
+				// anoMesDiaPenaRestante
+				// dataValidade
+				// situacao			
+			function Condenacao(gravidade, dataCondenacao, descricaoProcesso, dataFato, dataSentenca, ehReincidente, faixaEtaria, anoMesDiaPenaImposta, anoMesDiaPrazoPrescricional, dataValidade, situacao)
+			{
+				this.descricaoProcesso = descricaoProcesso;
+				this.dataFato = dataFato;
+				this.dataSentenca = dataSentenca;
+				this.ehReincidente = ehReincidente;
+				this.faixaEtaria = faixaEtaria;
+				this.anoMesDiaPenaImposta = anoMesDiaPenaImposta;
+				this.anoMesDiaPrazoPrescricional = anoMesDiaPrazoPrescricional;
+				this.anoMesDiaPenaRestante = new AnoMesDia(0, 0, 0);
+				this.dataValidade = dataValidade;
+				this.dataCondenacao = dataCondenacao;		
+				this.situacao = situacao;
+				this.anoMesDiaPenaCumprida = new AnoMesDia(0, 0, 0);
+				this.gravidade = 1;
+				
+				
+				this.calcularPenaRestante = function()
+				{
+					if (this.anoMesDiaPenaCumprida == null)
+					{
+						this.anoMesDiaPenaCumprida = new AnoMesDia(0, 0, 0);
+					}
+					return subtrairAnoMesDia(this.anoMesDiaPenaImposta, this.anoMesDiaPenaCumprida);
+				}
+				
+			}
+		
+			// Classe anoMesDia
+			function AnoMesDia(ano, mes, dia)
+			{
+				// Tipo Numerico
+				this.ano = ano;
+				
+				// Tipo Numerico
+				this.mes = mes;
+				
+				// Tipo Numerico
+				this.dia = dia;
+				
+				
+				this.converterEmDias = function()
+				{
+					var qtdAno = (this.ano == null? new Number(0): new Number(this.ano));
+					var qtdMes = (this.mes == null? new Number(0): new Number(this.mes));
+					var qtdDia = this.dia == null? new Number(0): new Number(this.dia);
+					return qtdAno * 360.0 + qtdMes * 30.0 + qtdDia;
+				}
+			}
+		
+			function calcularDiferencaData(dataInicio, dataFim)
+			{
+				if (dataInicio == null || dataFim == null) 
+				{
+					return null;
+				}
+				
+				if (dataInicio > dataFim) 
+				{
+					return null;
+				}
+
+				var diaInicio = dataInicio.getDate();
+				var mesInicio = dataInicio.getMonth();
+				var anoInicio = dataInicio.getFullYear();
+				
+				var diaFim = dataFim.getDate();
+				var mesFim = dataFim.getMonth();
+				var anoFim = dataFim.getFullYear();
+				
+				// Diminuo os anos
+				var qtdAno = new Number(anoFim - anoInicio);
+				var adicionarMes = new Number(0);
+				
+				if (mesFim < mesInicio)
+				{
+					qtdAno--;
+				}
+				
+				if (mesFim == mesInicio && diaFim < diaInicio)
+				{
+					qtdAno--;
+				}
+				
+				var anoMesDiaQtdAnoTemp = new AnoMesDia(qtdAno, 0, 0);
+				
+				var dataResultado = somarAnoMesDiaAData(dataInicio, anoMesDiaQtdAnoTemp);
+				
+				// Verificar se a data &eacute; igual
+				if (compararData(dataResultado, dataFim))
+				{
+					return anoMesDiaQtdAnoTemp;
+				}
+				
+				var qtdMes = new Number(0);
+				
+				if (mesFim >= mesInicio)
+				{
+					qtdMes = mesFim - mesInicio;
+				}
+				else
+				{
+					qtdMes = mesFim + 12 - mesInicio;
+				}
+				
+				if (diaFim < diaInicio)
+				{
+					qtdMes--;
+				}
+				
+				if (qtdMes == -1)
+				{
+					qtdMes = 11;
+				}
+				
+				var anoMesDiaQtdMesTemp = new AnoMesDia(0, qtdMes, 0);
+				
+				dataResultado = somarAnoMesDiaAData(dataResultado, anoMesDiaQtdMesTemp);
+				
+				// Verificar se a data &eacute; igual
+				if (compararData(dataResultado, dataFim))
+				{
+					anoMesDiaQtdMesTemp.ano = qtdAno;
+					return anoMesDiaQtdMesTemp;
+				}
+
+				var qtdDia = Math.round((dataFim.getTime() - dataResultado.getTime())/(1000*60*60*24));
+				var anoMesDiaQtdDiaTemp = new AnoMesDia(0, 0, qtdDia);
+				dataResultado = somarAnoMesDiaAData(dataResultado, anoMesDiaQtdDiaTemp);
+				
+				// Verificar se a data &eacute; igual
+				if (compararData(dataResultado, dataFim))
+				{
+					anoMesDiaQtdDiaTemp.ano = qtdAno;
+					anoMesDiaQtdDiaTemp.mes = qtdMes;
+					return anoMesDiaQtdDiaTemp;
+				}
+				
+				return new AnoMesDia(0, 0, 0);
+				
+				
+			}
+			
+			// Fun&ccedil;&atilde;o somarAnoMesDiaAData
+			// Parametros
+			//    dataBase - data de base - tipo date
+			//    anoMesDia - prazo em anos, meses e dias - tipo anoMesDia
+			function somarAnoMesDiaAData(dataBase, anoMesDia)
+			{			
+				if (dataBase != null &&  anoMesDia==null)
+				{
+					return dataBase;
+				}
+			
+				if (dataBase == null ||  anoMesDia==null)
+				{
+					return null;
+				}
+				var dataFinal = new Date(dataBase);				
+				dataFinal.setFullYear(dataFinal.getFullYear() + anoMesDia.ano);
+				
+				// Pego o dia original, pois depois de somarmos os meses, o dia mudar, indica que o dia correspondente n&atilde;o existe no mes final
+				var diaOriginal = dataFinal.getDate();
+				
+				dataFinal.setMonth(dataFinal.getMonth() + anoMesDia.mes);
+
+				// Esta funcao e usada apenas por causa de fevereiro
+				// Exemplo:
+				// 31/12/2000 + 2M = Pelo Javascript daria 3/03/2001, mas pela lei penal deve ser dia 01/03/2001	
+				// 30/12/2000 + 2M = Pelo Javascript daria 2/03/2001, mas pela lei penal deve ser dia 01/03/2001	
+				if (diaOriginal != dataFinal.getDate())
+				{
+					dataFinal.setDate(1);
+				}				
+				
+				dataFinal.setDate(dataFinal.getDate() + anoMesDia.dia);	
+					
+				return dataFinal;
+			}	
+				
+			// Fun&ccedil;&atilde;o subtrairAnoMesDiaDaData
+			// Parametros
+			//    dataBase - data de base - tipo date
+			//    anoMesDia - prazo em anos, meses e dias - tipo anoMesDia
+			function subtrairAnoMesDiaDaData(dataBase, anoMesDia)
+			{
+				if (dataBase != null &&  anoMesDia==null)
+				{
+					return dataBase;
+				}
+				
+				if (dataBase == null ||  anoMesDia==null)
+				{
+					return null;
+				}
+				var dataFinal = new Date(dataBase);
+				dataFinal.setDate(dataFinal.getDate() - anoMesDia.dia);
+				dataFinal.setMonth(dataFinal.getMonth() - anoMesDia.mes);			
+				dataFinal.setFullYear(dataFinal.getFullYear() - anoMesDia.ano);
+				return dataFinal;
+			}	
+			
+			// Fun&ccedil;&atilde;o compararAnoMesDia
+			// Parametros
+			//    anoMesDiaBase - prazo em anos, meses e dias - tipo anoMesDia
+			//    anoMesDia - prazo em anos, meses e dias - tipo anoMesDia
+			// Retorno
+			//    true - se s&atilde;o iguais 		
+			//    false - se s&atilde;o diferentes 		
+			function compararAnoMesDia(anoMesDiaBase, anoMesDia)
+			{
+				if (anoMesDiaBase.ano == anoMesDia.ano && anoMesDiaBase.mes == anoMesDia.mes && anoMesDiaBase.dia == anoMesDia.dia)
+				{
+					return true;
+				}
+				return false;
+			}
+			
+			function verificarSePenaEstaDentroDoIntervalo(anoMesDiaPenaImposta, prazoPrescricional)
+			{
+				totalQtdDiaPenaImposta = new Number(anoMesDiaPenaImposta.ano * 360.0 + anoMesDiaPenaImposta.mes * 30.0 + anoMesDiaPenaImposta.dia * 1.0);
+				totalQtdDiaPrazoPrescricionalInicio = new Number(prazoPrescricional.anoMesDiaInicio.ano * 360.0 + prazoPrescricional.anoMesDiaInicio.mes * 30.0 + prazoPrescricional.anoMesDiaInicio.dia*1.0);
+				totalQtdDiaPrazoPrescricionalFim = new Number(prazoPrescricional.anoMesDiaFim.ano * 360.0 + prazoPrescricional.anoMesDiaFim.mes * 30.0 + prazoPrescricional.anoMesDiaFim.dia * 1.0);
+				var pertenceAoIntervalo = false;
+				
+				if (totalQtdDiaPenaImposta > totalQtdDiaPrazoPrescricionalInicio && totalQtdDiaPenaImposta <= totalQtdDiaPrazoPrescricionalFim)
+				{
+					pertenceAoIntervalo = true;
+				}
+				
+				return pertenceAoIntervalo;
+			}
+			
+			function compararData(dataBase, data)
+			{
+				if (dataBase.getFullYear() == data.getFullYear() && dataBase.getMonth() == data.getMonth() && dataBase.getDate() == data.getDate())
+				{
+					return true;
+				}
+				return false;
+			}
+			
+			
+			// Fun&ccedil;&atilde;o compararAnoMesDiaMaiorQueOutroAnoMesDia
+			// Parametros
+			//    anoMesDiaMarior - prazo em anos, meses e dias - tipo anoMesDia
+			//    anoMesDiaMenor - prazo em anos, meses e dias - tipo anoMesDia
+			// Retorno
+			//    true - se o base for maior  		
+			//    false - se s&atilde;o diferentes 		
+			function compararAnoMesDiaMaiorQueOutroAnoMesDia(anoMesDiaMaior, anoMesDiaMenor)
+			{
+				if (new Number(anoMesDiaMaior.ano*12.0*30.0 + anoMesDiaMaior.mes*30.0 + anoMesDiaMaior.dia*1.0) >=  new Number(anoMesDiaMenor.ano*12.0*30.0 + anoMesDiaMenor.mes*30.0 + anoMesDiaMenor.dia*1.0))
+				{
+					return true;
+				}
+				return false;
+			}
+
+			// Fun&ccedil;&atilde;o calcularFracao
+			// Parametros
+			//    anoMesDia - prazo em anos, meses e dias - tipo anoMesDia
+			//    numerador - numerador da fracao desejada - tipo numerico
+			//    denominador - denominador da fracao desejada - tipo numerico			
+			function calcularFracao(anoMesDia, numerador, denominador)
+			{
+				if (anoMesDia == null ||  numerador==null || denominador==null || denominador==0)
+				{
+					return new AnoMesDia(0,0,0);
+				}
+				
+				// Transforma em dias
+				var qtdDia = new Number(anoMesDia.ano * 360.0 + anoMesDia.mes * 30.0 + anoMesDia.dia * 1.0);
+				
+				// Multiplico pela fracao
+				qtdDia = new Number((qtdDia * numerador) / denominador);
+				
+				// Divido por 30
+				var diaFinal = qtdDia % 30;
+				var qtdMes = Math.floor(qtdDia / 30);
+				
+				var mesFinal = qtdMes % 12;
+				var anoFinal = Math.floor(qtdMes / 12);
+				
+				return 	new AnoMesDia(anoFinal, mesFinal, Math.floor(diaFinal));
+			}	
+			
+			
+			
+			function somarAnoMesDia(anoMesDiaBase, adicionalAnoMesDia)
+			{				
+				if (anoMesDiaBase != null &&  adicionalAnoMesDia==null)
+				{
+					return anoMesDiaBase;
+				}
+				
+				if (anoMesDiaBase == null ||  adicionalAnoMesDia==null)
+				{
+					return new AnoMesDia(0,0,0);
+				}
+				
+				var anoMesDiaBaseTemp = new AnoMesDia(anoMesDiaBase.ano, anoMesDiaBase.mes, anoMesDiaBase.dia);
+				var adicionalAnoMesDiaTemp = new AnoMesDia(adicionalAnoMesDia.ano, adicionalAnoMesDia.mes, adicionalAnoMesDia.dia);
+				
+				
+				// Transforma em dias
+				var qtdDiaBase = new Number(anoMesDiaBaseTemp.ano * 360.0 + anoMesDiaBaseTemp.mes * 30.0 + anoMesDiaBaseTemp.dia * 1.0);
+				var qtdDiaAdicional = new Number(adicionalAnoMesDiaTemp.ano * 360.0 + adicionalAnoMesDiaTemp.mes * 30.0 + adicionalAnoMesDiaTemp.dia * 1.0);
+				
+				var qtdDiaResultado = new Number(qtdDiaBase + qtdDiaAdicional);
+				
+				var qtdAno = Math.floor(qtdDiaResultado / 360);
+				var restoQtdAno = qtdDiaResultado % 360;
+				
+				var qtdMes = Math.floor(restoQtdAno / 30);
+				var qtdDia = restoQtdAno % 30;
+				
+				return new AnoMesDia(qtdAno, qtdMes, qtdDia);
+			}	
+			
+			function subtrairAnoMesDia(anoMesDiaBase, adicionalAnoMesDia)
+			{	
+				if (anoMesDiaBase == null ||  adicionalAnoMesDia==null)
+				{
+					return new AnoMesDia(0,0,0);
+				}
+				
+				var anoMesDiaBaseTemp = new AnoMesDia(anoMesDiaBase.ano, anoMesDiaBase.mes, anoMesDiaBase.dia);
+				var adicionalAnoMesDiaTemp = new AnoMesDia(adicionalAnoMesDia.ano, adicionalAnoMesDia.mes, adicionalAnoMesDia.dia);
+				
+				
+				// Transforma em dias
+				var qtdDiaBase = new Number(anoMesDiaBaseTemp.ano * 360.0 + anoMesDiaBaseTemp.mes * 30.0 + anoMesDiaBaseTemp.dia * 1.0);
+				var qtdDiaAdicional = new Number(adicionalAnoMesDiaTemp.ano * 360.0 + adicionalAnoMesDiaTemp.mes * 30.0 + adicionalAnoMesDiaTemp.dia * 1.0);
+				
+				var qtdDiaResultado = new Number(qtdDiaBase - qtdDiaAdicional);
+				
+				if (qtdDiaBase < qtdDiaAdicional)
+				{
+					return new AnoMesDia(0, 0, 0);
+				}
+				
+				var qtdAno = Math.floor(qtdDiaResultado / 360);
+				var restoQtdAno = qtdDiaResultado % 360;
+				
+				var qtdMes = Math.floor(restoQtdAno / 30);
+				var qtdDia = restoQtdAno % 30;
+				
+
+				return new AnoMesDia(qtdAno, qtdMes, qtdDia);
+			}	
+			
+			function converterDataStringEmDataObjeto(dataString)
+			{
+				if (dataString == '')
+					return null;
+				var listaParteData = dataString.split('/');
+				var dia = new Number(listaParteData[0]);
+				var mes = new Number(listaParteData[1] - 1);
+				var ano = new Number(listaParteData[2]);
+
+				return new Date(ano, mes,dia, 12, 0, 0, 0);
+			}
+			
+			function converterDataStringSemBarraEmDataObjeto(dataString)
+			{
+				if (dataString == '')
+					return null;
+				var dia = new Number(dataString.substring(0,2));
+				var mes = new Number(dataString.substring(2,4) - 1);
+				var ano = new Number(dataString.substring(4,8));
+				
+				return new Date(ano, mes,dia, 12, 0, 0, 0);
+			}
+
+		</script>
+
+		<!-- CLASSES DE INTERFACE -->
+		<script>
+			var calculadoraPrescricaoObjeto = null;
+			var permiteImprimir = false;
+
+			// COMECA AQUI
+			function limparCampos(modoUsuario)
+			{
+				if (modoUsuario)
+				{
+					if (confirm('Esta opera\u00e7\u00e3o ir\u00e1 limpar todos os dados inseridos. Deseja continuar assim mesmo?'))
+					{
+						document.location.reload();
+						return;
+					}
+					else
+					{
+						return;
+					}	
+				}
+			
+				calculadoraPrescricaoObjeto = new CalculadoraPrescricao();			
+				
+				document.calculoPrescricao.nomeSentenciado.value = '';
+				document.calculoPrescricao.numeroExecucao.value = '';
+				document.calculoPrescricao.dataNascimento.value = '';
+				document.getElementById('idadeAtual').innerHTML = '';
+				
+				document.calculoPrescricao.dataUltimaFuga.value = '';
+				
+				calculadoraPrescricaoObjeto.sentenciadoPreso = 'preso_sim';
+				document.calculoPrescricao.sentenciadoPreso.value = 'preso_sim';
+								
+				document.getElementById('dataInicioDetracao_0').value = '';
+				document.getElementById('dataFimDetracao_0').value = '';
+				document.getElementById('descricaoProcessoDetracao_0').value = '';
+
+				//Excluir os campos adicionais de Detracao
+				i = 1;
+				while (document.getElementById('linhaDetracao_' + i) != null)
+				{	
+					var linha = document.getElementById('linhaDetracao_' + i);
+					var tabelaCorpo = document.getElementById('tabelaCorpo');
+						
+					var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+					tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+					i++;
+				}
+				document.getElementById('totalDetracao').innerHTML = '(0a0m0d)';
+				document.calculoPrescricao.dataInicioCumprimento.value = '';
+				document.getElementById('dataInicioInterrupcao_0').value = '';
+				document.getElementById('dataFimInterrupcao_0').value = '';
+
+				//Excluir os campos adicionais de Interrupcao
+				i = 1;
+				while (document.getElementById('linhaInterrupcao_' + i) != null)
+				{	
+					var linha = document.getElementById('linhaInterrupcao_' + i);
+					var tabelaCorpo = document.getElementById('tabelaCorpo');
+						
+					var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+					tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+					i++;
+				}
+				document.getElementById('totalInterrupcao').innerHTML = '(0a0m0d)';
+			
+				document.getElementById('remicao_0').value = '0';
+				//Excluir os campos adicionais de Remicao
+				i = 1;
+				while (document.getElementById('linhaRemicao_' + i) != null)
+				{	
+					var linha = document.getElementById('linhaRemicao_' + i);
+					var tabelaCorpo = document.getElementById('tabelaCorpo');
+						
+					var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+					tabelaCorpo.deleteRow(i);
+					i++;
+				}
+				document.getElementById('totalRemicao').innerHTML = '(0 dias)';
+				
+				document.calculoPrescricao.dataInicioCumprimento.value = '';
+				
+				//Excluir os campos adicionais de Condenacao
+				document.calculoPrescricao.gravidade_0.value = '1';
+				document.calculoPrescricao.descricaoProcessoCondenacao_0.value = '';
+				document.calculoPrescricao.anoPenaImpostaCondenacao_0.value = '0';
+				document.calculoPrescricao.mesPenaImpostaCondenacao_0.value = '0';
+				document.calculoPrescricao.diaPenaImpostaCondenacao_0.value = '0';
+				document.calculoPrescricao.dataFatoCondenacao_0.value = '';
+				document.calculoPrescricao.dataSentencaCondenacao_0.value = '';
+				document.calculoPrescricao.dataCondenacao_0.value = '';
+				document.calculoPrescricao.faixaEtariaCondenacao_0.value = '';
+				document.calculoPrescricao.ehReincidenteCondenacao_0.value = '';					
+				document.getElementById('prazoPrescricionalCondenacao_0').innerHTML = '0a0m0d';
+				document.getElementById('restantePenaCondenacao_0').innerHTML = '0a0m0d';
+				document.getElementById('dataValidadeCondenacao_0').innerHTML = '&nbsp;';
+				document.getElementById('situacaoCondenacao_0').innerHTML = 'Sem Situacao';
+				
+				i = 1;
+				while (document.getElementById('linhaCondenacao_' + i) != null)
+				{	
+					var linha = document.getElementById('linhaCondenacao_' + i);
+					var tabelaCorpo = document.getElementById('tabelaCorpoCondenacao');
+						
+					//var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+					tabelaCorpo.deleteRow(1);
+					i++;
+				}
+				document.getElementById('totalRemicao').innerHTML = '(0 dias)';	
+//				document.getElementById('dataBase').innerHTML = '';
+				document.getElementById('penaCumprida').innerHTML = '';
+				document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML = '';
+				document.getElementById('anoMesDiaPenaCumprida').innerHTML = '(0a0m0d)';
+				document.calculoPrescricao.observacaoDocumento.value = '';
+				document.calculoPrescricao.dataDocumento.value = imprimirData(new Date());
+				document.calculoPrescricao.nomeDonoDocumento.value = '';
+			}
+			
+			function validarCampos()
+			{
+				if (calculadoraPrescricaoObjeto.sentenciadoPreso == '')
+				{
+					alert('O Campo \'O apenado j\u00e1 iniciou o cumprimento da pena?\' deve ser informado.');
+					document.calculoPrescricao.sentenciadoPreso.focus();
+					return false;
+				}
+				
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_nao')
+				{
+					if (calculadoraPrescricaoObjeto.listaCondenacao.length > 1)
+					{
+						for (var j = 0; j < calculadoraPrescricaoObjeto.listaDetracao.length; j++)
+						{
+							var detracaoTemp = calculadoraPrescricaoObjeto.listaDetracao[j];
+					
+							if (detracaoTemp.descricao == null || detracaoTemp.descricao == '')
+							{
+								alert('O Campo \'Processo da Detra\u00e7\u00e3o\' deve ser informado.');
+								document.getElementById('descricaoProcessoDetracao_' + j).focus();
+								return false;
+							}
+					
+						}
+					}
+				}
+				
+				//Verifica sobreposi&ccedil;&atilde;o de datas de detracao
+				for (var i = 0; i < calculadoraPrescricaoObjeto.listaDetracao.length; i++)
+				{
+					var dataInicioDetracaoReferencia = calculadoraPrescricaoObjeto.listaDetracao[i].dataInicio;
+					var dataFimDetracaoReferencia = calculadoraPrescricaoObjeto.listaDetracao[i].dataFim;
+				
+					for (var j = 0; j < calculadoraPrescricaoObjeto.listaDetracao.length; j++)
+					{
+						if (i == j)
+							continue;
+						
+						var dataInicioDetracaoComparada = calculadoraPrescricaoObjeto.listaDetracao[j].dataInicio;
+						var dataFimDetracaoComparada = calculadoraPrescricaoObjeto.listaDetracao[j].dataFim;
+
+						if ((dataInicioDetracaoComparada > dataInicioDetracaoReferencia && dataInicioDetracaoComparada < dataFimDetracaoReferencia) || 
+						(dataFimDetracaoComparada > dataInicioDetracaoReferencia && dataFimDetracaoComparada < dataFimDetracaoReferencia))					
+						{
+							document.calculoPrescricao.dataFimDetracao_0.focus();
+							alert('Existe sobreposi\u00e7\u00e3o de datas de detrac\u00e3o.');
+							return false;
+						}
+					}
+				}
+
+				//Verifica sobreposi&ccedil;&atilde;o de datas de detracao
+				for (var i = 0; i < calculadoraPrescricaoObjeto.listaDetracao.length; i++)
+				{
+					var detracaoTemp = calculadoraPrescricaoObjeto.listaDetracao[i];
+					
+					if (detracaoTemp.descricao != null && detracaoTemp.descricao != '')
+					{
+					
+						var encontrou = false;
+						// verifica se existe condenacao com o identificador
+						for (var j = 0; j < calculadoraPrescricaoObjeto.listaCondenacao.length; j++)
+						{
+							var condenacaoTemp = calculadoraPrescricaoObjeto.listaCondenacao[j];
+							
+							if (condenacaoTemp.descricaoProcesso == detracaoTemp.descricao)
+							{
+								encontrou = true; 
+								break;
+							}	
+						}
+						
+						if (encontrou == false)
+						{
+							document.calculoPrescricao.descricaoProcessoCondenacao_0.focus();
+							alert('Processo de Origem informada na detra\u00e7\u00e3o n\u00e3o existe nas lista de condena\u00e7\u00f5es. Verifique!');
+							return false;
+						}
+					}	
+				}	
+				
+				
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaDetracao.length; i++)
+					{
+						var dataInicioDetracao = calculadoraPrescricaoObjeto.listaDetracao[i].dataInicio;
+						var dataFimDetracao = calculadoraPrescricaoObjeto.listaDetracao[i].dataFim;
+
+						if (dataInicioDetracao != null && dataFimDetracao != null)
+						{
+							if (dataFimDetracao > calculadoraPrescricaoObjeto.dataInicioCumprimento)
+							{
+								document.calculoPrescricao.dataFimDetracao_0.focus();
+								alert('N\u00e3o podem existir detra\u00e7\u00f5es depois da data de in\u00edcio de cumprimento.\nA data de fim da detra\u00e7\u00e3o (' + imprimirData(dataFimDetracao) + ') \u00e9 maior que a data de in\u00edcio de cumprimento (' + imprimirData(calculadoraPrescricaoObjeto.dataInicioCumprimento) + ').');
+								return false;
+								
+							}
+						}				
+					}	
+				}
+				
+				
+				
+			
+				if (calculadoraPrescricaoObjeto.dataInicioCumprimento == null && document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					alert('O Campo \'Data de In\u00edcio de Cumprimento da Pena\' deve ser informado.');
+					document.calculoPrescricao.dataInicioCumprimento.focus();
+					return false;
+				}
+				
+				
+				//Verifica sobreposi&ccedil;&atilde;o de datas de interrup&ccedil;&atilde;o
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaInterrupcao.length; i++)
+					{
+						var dataInicioInterrupcaoReferencia = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataInicio;
+						var dataFimInterrupcaoReferencia = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataFim;
+					
+						for (var j = 0; j < calculadoraPrescricaoObjeto.listaInterrupcao.length; j++)
+						{
+							if (i == j)
+								continue;
+							
+							var dataInicioInterrupcaoComparada = calculadoraPrescricaoObjeto.listaInterrupcao[j].dataInicio;
+							var dataFimInterrupcaoComparada = calculadoraPrescricaoObjeto.listaInterrupcao[j].dataFim;
+
+							if ((dataInicioInterrupcaoComparada > dataInicioInterrupcaoReferencia && dataInicioInterrupcaoComparada < dataFimInterrupcaoReferencia) || 
+							(dataFimInterrupcaoComparada > dataInicioInterrupcaoReferencia && dataFimInterrupcaoComparada < dataFimInterrupcaoReferencia))					
+							{
+								document.calculoPrescricao.dataFimInterrupcao_0.focus();
+								alert('Existe sobreposi\u00e7\u00e3o de datas de interrup\u00e7\u00e3o.');
+								return false;
+							}
+						}
+					}
+				}	
+				
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaInterrupcao.length; i++)
+					{
+						var dataInicioInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataInicio;
+						var dataFimInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataFim;
+
+						if (dataInicioInterrupcao != null && dataFimInterrupcao != null)
+						{
+							if (dataInicioInterrupcao >= dataFimInterrupcao)
+							{
+								document.getElementById('dataFimInterrupcao_' + i).focus();
+								alert('A data de fim de interrup\u00e7\u00e3o n\u00e3o pode ser menor que a data de in\u00edcio.');
+								return false;
+							}
+						}
+					}
+				}	
+				
+
+				// Verifica se a data de inicio de interrup&ccedil;&atilde;o &eacute; menor que a data de in&iacute;cio de cumprimento.	
+				
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaInterrupcao.length; i++)
+					{
+						var dataInicioInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataInicio;
+						var dataFimInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataFim;
+
+						if (dataInicioInterrupcao != null && dataFimInterrupcao != null)
+						{
+							if (dataInicioInterrupcao < calculadoraPrescricaoObjeto.dataInicioCumprimento)
+							{
+								document.calculoPrescricao.dataInicioInterrupcao_0.focus();
+								alert('N\u00e3o podem existir interrup\u00e7\u00f5es antes da data de in\u00edcio de cumprimento.\nA data de in\u00edcio da interrup\u00e7\u00e3o (' + imprimirData(dataInicioInterrupcao) + ') \u00e9 menor que a data de in\u00edcio de cumprimento (' + imprimirData(calculadoraPrescricaoObjeto.dataInicioCumprimento) + ').');
+								return false;
+							}
+						}				
+					}
+				}	
+				
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaInterrupcao.length; i++)
+					{
+						var dataInicioInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataInicio;
+						var dataFimInterrupcao = calculadoraPrescricaoObjeto.listaInterrupcao[i].dataFim;
+
+						if (dataInicioInterrupcao != null && dataFimInterrupcao == null)
+						{
+							document.calculoPrescricao.dataInicioInterrupcao_0.focus();
+							alert('Existem interrupc\u00f5es em aberto. Verifique!.');
+							return false;
+						}
+						
+						if (dataInicioInterrupcao == null && dataFimInterrupcao != null)
+						{
+							document.calculoPrescricao.dataInicioInterrupcao_0.focus();
+							alert('Existem interrupc\u00f5es em aberto. Verifique!.');
+							return false;
+						}
+						
+					}
+				}	
+
+				if (calculadoraPrescricaoObjeto.dataUltimaFuga == null && document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{
+					alert('O campo data da \u00faltima fuga \u00e9 obrigat\u00f3rio.');
+					document.calculoPrescricao.dataUltimaFuga.focus();
+					return false;
+				}
+				
+				for (var i = 0; i < calculadoraPrescricaoObjeto.listaCondenacao.length; i++)
+				{
+					var condenacao = calculadoraPrescricaoObjeto.listaCondenacao[i];
+
+					if (	condenacao.anoMesDiaPenaImposta == null || 
+							(condenacao.anoMesDiaPenaImposta.ano == 0 && condenacao.anoMesDiaPenaImposta.mes == 0 && condenacao.anoMesDiaPenaImposta.dia == 0)
+						)	
+					{
+						alert('O campo pena \u00e9 obrigat\u00f3rio e deve ser maior que zero.');
+						document.calculoPrescricao.anoPenaImpostaCondenacao_0.focus();
+						return false;
+					}
+					
+					
+					
+					if (condenacao.dataCondenacao == null)
+					{
+						alert('O campo \'Data de in\u00edcio da condena\u00e7\u00e3o\' \u00e9 obrigat\u00f3rio.');
+						document.calculoPrescricao.dataCondenacao_0.focus();
+						return false;
+					}
+					
+					if (condenacao.dataFato == null)
+					{
+						alert('O campo data do fato \u00e9 obrigat\u00f3rio.');
+						document.calculoPrescricao.dataFatoCondenacao_0.focus();
+						return false;
+					}
+
+					if (condenacao.dataSentenca == null && condenacao.faixaEtaria == 'maior70')
+					{
+						alert('O campo data da senten\u00e7a \u00e9 obrigat\u00f3rio.');
+						document.calculoPrescricao.dataSentencaCondenacao_0.focus();
+						return false;
+					}					
+					
+				}
+
+				// valida se data da condenacao � maior ou igual  
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim')
+				{				
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaCondenacao.length; i++)
+					{
+						var condenacao = calculadoraPrescricaoObjeto.listaCondenacao[i];
+						
+						if (condenacao.dataCondenacao != null)
+						{
+							if (calculadoraPrescricaoObjeto.dataInicioCumprimento.valueOf() >  condenacao.dataCondenacao.valueOf())
+							{
+								alert('A Data de in\u00edcio da condena\u00e7\u00e3o deve ser maior ou igual que a Data de In\u00edcio de Cumprimento da Pena.');
+								document.getElementById('dataCondenacao_' + i).focus();
+								return false;
+							}
+							else if (calculadoraPrescricaoObjeto.dataUltimaFuga != null && calculadoraPrescricaoObjeto.dataUltimaFuga.valueOf() <  condenacao.dataCondenacao.valueOf())
+							{
+								alert('A Data de in\u00edcio da condena\u00e7\u00e3o deve ser menor que a data da \u00faltima fuga.');
+								document.getElementById('dataCondenacao_' + i).focus();
+								return false;
+							}							
+						}
+
+					}
+				}	
+
+				return true;
+			}
+	
+			function atualizarNomeSentenciado(campo)
+			{
+				calculadoraPrescricaoObjeto.nomeSentenciado = campo.value;
+			}
+
+			function atualizarNumeroExecucao(campo)
+			{
+				calculadoraPrescricaoObjeto.numeroExecucao = campo.value;
+			}
+
+			
+			function atualizarDataInicioCumprimento(campo)
+			{
+				calculadoraPrescricaoObjeto.dataInicioCumprimento = converterDataStringSemBarraEmDataObjeto(campo.value);
+				atualizarPenaCumprida();
+			}
+			
+			function atualizarSentenciadoPreso(campo)
+			{
+				calculadoraPrescricaoObjeto.sentenciadoPreso = campo.value;
+			}
+			
+			
+			function atualizarLabelDataInicioPena()
+			{
+				if (document.calculoPrescricao.sentenciadoPreso.value == 'preso_sim' ||  document.calculoPrescricao.sentenciadoPreso.value == '')
+				{
+					document.getElementById('labelDataInicioPena').innerText = 'Data de In\u00edcio de Cumprimento da Pena:';
+					document.getElementById('labelDataInicioPena').textContent = 'Data de In\u00edcio de Cumprimento da Pena:';
+					document.getElementById('divInterrupcao').style.display = '';
+					document.getElementById('linhaInterrupcao_0').style.display = '';
+//					document.getElementById('mensagemInterrupcao').style.display = '';
+					document.getElementById('campoInterrupcao').style.display = '';
+					document.getElementById('linhaRemicao_0').style.display = '';
+					document.getElementById('campoRemicao').style.display = '';
+					document.getElementById('linhaDataUltimaFuga').style.display = '';
+					document.getElementById('linhaDataInicioCumprimento').style.display = '';
+					document.getElementById('divDataInicioCondenacao').style.display = '';
+					document.getElementById('divPenaRemanescenteDataTransitoJulgadoAcusacao').style.display = 'none';
+					document.getElementById('divPenaRemanescenteCondenacao').style.display = '';
+					document.getElementById('divDataTransitoJulgadoAcusacao').style.display = 'none';
+					document.getElementById('divValidadeFormulaCondenacao').style.display = '';
+					document.getElementById('divValidadeFormulaTransitoJulgadoAcusacao').style.display = 'none';
+					document.getElementById('penaCumpridaAteADataBase').style.display = '';
+					document.getElementById('divDataTransitoJulgadoAcusacao').style.display = 'none';
+					
+					//document.getElementById('labelDataBase').innerHTML = 'Data da \u00daltima Fuga:';
+					document.getElementById('labelPenaCumpridaAte').innerHTML = 'Pena Cumprida At\u00e9 a Data da \u00daltima Fuga:';
+					
+					document.getElementById('penaCumprida').innerHTML = '(Data da \u00daltima Fuga - Data In\u00edcio) - Interrup\u00e7\u00e3o + Detra\u00e7\u00e3o + Remi\u00e7\u00e3o';
+					document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML = '';	
+				}
+					
+				else if (document.calculoPrescricao.sentenciadoPreso.value ==  'preso_nao')
+				{
+					document.getElementById('labelDataInicioPena').innerText = 'Data do Tr\u00e2nsito em Julgado da Senten\u00e7a Condenat\u00f3ria para a Acusa\u00e7\u00e3o e/ou Data da Revoga\u00e7\u00e3o da Suspens\u00e3o Condicional da Pena:';
+					document.getElementById('labelDataInicioPena').textContent = 'Data do Tr\u00e2nsito em Julgado da Senten\u00e7a Condenat\u00f3ria para a Acusa\u00e7\u00e3o e/ou Data da Revoga\u00e7\u00e3o da Suspens\u00e3o Condicional da Pena:';
+					document.getElementById('divInterrupcao').style.display = 'none';
+					document.getElementById('labelPenaCumpridaAte').innerHTML = 'Pena Cumprida At\u00e9 a Data do Tr\u00e2nsito em Julgado da Senten\u00e7a Condenat\u00f3ria para a Acusa\u00e7\u00e3o e/ou Data da Revoga\u00e7\u00e3o da Suspens\u00e3o Condicional da Pena:';
+					
+					document.getElementById('dataInicioInterrupcao_0').value = '';
+					document.getElementById('dataFimInterrupcao_0').value = '';
+					
+					document.getElementById('penaCumprida').innerHTML = 'Detra\u00e7\u00e3o';
+					document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML = '';	
+					
+					document.getElementById('divDataInicioCondenacao').style.display = 'none';
+					document.getElementById('divPenaRemanescenteCondenacao').style.display = 'none';
+					document.getElementById('divDataTransitoJulgadoAcusacao').style.display = '';
+					document.getElementById('divPenaRemanescenteDataTransitoJulgadoAcusacao').style.display = '';
+					document.getElementById('divValidadeFormulaTransitoJulgadoAcusacao').style.display = '';
+					document.getElementById('divValidadeFormulaCondenacao').style.display = 'none';
+					
+					document.getElementById('penaCumpridaAteADataBase').style.display = 'none';
+
+					
+					document.getElementById('totalInterrupcao').innerHTML = '(0a0m0d)';
+					//Excluir os campos adicionais de Interrupcao
+					var i = 1;
+					while (document.getElementById('linhaInterrupcao_' + i) != null)
+					{	
+						var linha = document.getElementById('linhaInterrupcao_' + i);
+						var tabelaCorpo = document.getElementById('tabelaCorpo');
+							
+						var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+						tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+						i++;
+					}
+			
+					document.getElementById('remicao_0').value = '0';
+					document.getElementById('totalRemicao').innerHTML = '(0 dias)';
+					//Excluir os campos adicionais de Remicao
+					i = 1;
+					while (document.getElementById('linhaRemicao_' + i) != null)
+					{	
+						var linha = document.getElementById('linhaRemicao_' + i);
+						var tabelaCorpo = document.getElementById('tabelaCorpo');
+							
+						var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+						tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+						i++;
+					}
+						
+					var listaInterrupcao = new Array();
+					listaInterrupcao[0] = new Periodo(null, null, null);
+					calculadoraPrescricaoObjeto.listaInterrupcao = listaInterrupcao;
+
+					var listaRemicao = new Array();
+					listaRemicao[0] = new Remicao(0);
+					calculadoraPrescricaoObjeto.listaRemicao = listaRemicao;
+					
+					document.getElementById('dataUltimaFuga').value = '';
+					calculadoraPrescricaoObjeto.dataUltimaFuga = null;
+					
+					document.getElementById('linhaInterrupcao_0').style.display = 'none';
+					//document.getElementById('mensagemInterrupcao').style.display = 'none';
+					document.getElementById('campoInterrupcao').style.display = 'none';
+					document.getElementById('linhaRemicao_0').style.display = 'none';
+					document.getElementById('campoRemicao').style.display = 'none';
+					document.getElementById('linhaDataUltimaFuga').style.display = 'none';
+					document.getElementById('linhaDataInicioCumprimento').style.display = 'none';
+					
+					
+				}			
+			}
+
+			function atualizarListaCondenacaoDataNascimento(dataNascimento)
+			{
+				
+			
+				var valorCampo = converterDataStringSemBarraEmDataObjeto(dataNascimento.value);
+				calculadoraPrescricaoObjeto.dataNascimento = valorCampo;
+				
+				var dataAtual = new Date();
+				
+				if (valorCampo)
+				{
+					var idadeAtual = calcularDiferencaData(valorCampo, dataAtual);
+					document.getElementById('idadeAtual').innerHTML = 'Idade Atual: ' + idadeAtual.ano + ' anos ';
+				}
+				
+				for (var i = 0; i < calculadoraPrescricaoObjeto.listaCondenacao.length; i++)
+				{
+					var condenacao = calculadoraPrescricaoObjeto.listaCondenacao[i];
+					
+					if (condenacao.dataFato && calculadoraPrescricaoObjeto.dataNascimento)
+					{
+						var idade = calcularDiferencaData(valorCampo, condenacao.dataFato);
+
+						if (idade != null && idade.ano < 21)
+						{
+							condenacao.faixaEtaria = 'menor21';
+							document.getElementById('faixaEtariaCondenacao_' + i).value = 'menor21';
+						}
+						else if (idade != null && idade.ano >= 21 && idade.ano < 70)
+						{
+							condenacao.faixaEtaria = 'maior21Menor70';
+							document.getElementById('faixaEtariaCondenacao_' + i).value = 'maior21Menor70';
+						}
+					}	
+					
+					if (condenacao.dataSentenca && calculadoraPrescricaoObjeto.dataNascimento)
+					{
+						var idade = calcularDiferencaData(valorCampo, condenacao.dataSentenca);
+						
+						if (idade != null && idade.ano > 70)
+						{
+							condenacao.faixaEtaria = 'maior70';
+							document.getElementById('faixaEtariaCondenacao_' + i).value = 'maior70';
+						}
+					}
+				}
+			}
+
+			function atualizarListaCondenacao(campo)
+			{
+			
+
+				// Pelo nome do campo, descobrimos o seu indice e se o campo &eacute; ano, mes, ou dia
+				var listaParte = campo.name.split("_");
+				var tipoCampo = listaParte[0];
+				var indice = new Number(listaParte[1]);
+				//var valorCampo = converterDataStringSemBarraEmDataObjeto(campo.value);
+
+				if (tipoCampo == 'gravidade')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].gravidade = campo.value;
+				}	
+				
+				if (tipoCampo == 'descricaoProcessoCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].descricaoProcesso = campo.value;
+				}	
+				
+				if (tipoCampo == 'anoPenaImpostaCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].anoMesDiaPenaImposta.ano = campo.value;
+				}	
+
+				if (tipoCampo == 'mesPenaImpostaCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].anoMesDiaPenaImposta.mes = campo.value;
+				}	
+
+				if (tipoCampo == 'diaPenaImpostaCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].anoMesDiaPenaImposta.dia = campo.value;
+				}	
+
+				if (tipoCampo == 'faixaEtariaCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].faixaEtaria = campo.value;
+				}	
+
+				if (tipoCampo == 'ehReincidenteCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].ehReincidente = (campo.value == 'sim' ? true:false);
+				}	
+
+				if (tipoCampo == 'dataCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].dataCondenacao = converterDataStringSemBarraEmDataObjeto(campo.value);
+				}
+				if (tipoCampo == 'dataFatoCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].dataFato = converterDataStringSemBarraEmDataObjeto(campo.value);
+				}	
+				if (tipoCampo == 'dataSentencaCondenacao')
+				{
+					calculadoraPrescricaoObjeto.listaCondenacao[indice].dataSentenca = converterDataStringSemBarraEmDataObjeto(campo.value);
+				}	
+				
+				if (calculadoraPrescricaoObjeto.dataNascimento)
+				{
+					if (calculadoraPrescricaoObjeto.listaCondenacao[indice].dataFato != null)
+					{
+						var idade = calcularDiferencaData(calculadoraPrescricaoObjeto.dataNascimento, calculadoraPrescricaoObjeto.listaCondenacao[indice].dataFato);
+
+						if (idade.ano < 21)
+						{
+							calculadoraPrescricaoObjeto.listaCondenacao[indice].faixaEtaria = 'menor21';
+							document.getElementById('faixaEtariaCondenacao_' + indice).value = 'menor21';
+						}
+						else if (idade.ano >= 21 && idade.ano < 70)
+						{
+							calculadoraPrescricaoObjeto.listaCondenacao[indice].faixaEtaria = 'maior21Menor70';
+							document.getElementById('faixaEtariaCondenacao_' + indice).value = 'maior21Menor70';
+						}
+					}							
+					if (calculadoraPrescricaoObjeto.listaCondenacao[indice].dataSentenca != null)
+					{
+						var idade = calcularDiferencaData(calculadoraPrescricaoObjeto.dataNascimento, calculadoraPrescricaoObjeto.listaCondenacao[indice].dataSentenca);
+						
+						if (idade.ano > 70)
+						{
+							calculadoraPrescricaoObjeto.listaCondenacao[indice].faixaEtaria = 'maior70';
+							document.getElementById('faixaEtariaCondenacao_' + indice).value = 'maior70';
+						}
+					}
+				}
+				
+				
+				
+				atualizarTotalDetracao();
+				atualizarPenaCumprida();
+			}
+			
+			function atualizarListaDetracao(campo)
+			{
+				// Pelo nome do campo, descobrimos o seu indice e se o campo &eacute; ano, mes, ou dia
+				var listaParte = campo.name.split("_");
+				var tipoCampo = listaParte[0];
+				var indice = new Number(listaParte[1]);
+				
+				if (tipoCampo == 'dataInicioDetracao')
+				{
+					calculadoraPrescricaoObjeto.listaDetracao[indice].dataInicio = converterDataStringSemBarraEmDataObjeto(campo.value);
+				}	
+				
+				if (tipoCampo == 'dataFimDetracao')
+				{
+					calculadoraPrescricaoObjeto.listaDetracao[indice].dataFim = converterDataStringSemBarraEmDataObjeto(campo.value);
+				}	
+				
+				if (tipoCampo == 'descricaoProcessoDetracao')
+				{
+					calculadoraPrescricaoObjeto.listaDetracao[indice].descricao = campo.value;
+					calculadoraPrescricaoObjeto.listaDetracao[indice].condenacaoAssociada = null;
+				}	
+				
+				if (calculadoraPrescricaoObjeto.listaDetracao[indice].dataInicio != null && calculadoraPrescricaoObjeto.listaDetracao[indice].dataFim != null)
+				{
+					var diferencaData = calcularDiferencaData(calculadoraPrescricaoObjeto.listaDetracao[indice].dataInicio, calculadoraPrescricaoObjeto.listaDetracao[indice].dataFim);
+					
+					if (diferencaData != null)
+					{
+						diferencaData.dia += 1;
+						document.getElementById('resultadoPeriodoDetracao_' + indice).innerHTML = ' (' + imprimirAnoMesDia(diferencaData) + ")";
+					}
+					else
+					{
+						document.getElementById('resultadoPeriodoDetracao_' + indice).innerHTML = '';
+					}
+				}
+				else
+				{
+					document.getElementById('resultadoPeriodoDetracao_' + indice).innerHTML = '';
+				}
+				
+				atualizarTotalDetracao();
+				atualizarPenaCumprida();
+			}
+
+			function atualizarDataUltimaFuga(campo)
+			{
+				calculadoraPrescricaoObjeto.dataUltimaFuga = converterDataStringSemBarraEmDataObjeto(campo.value);
+				atualizarPenaCumprida();
+			}
+
+			
+			function atualizarListaInterrupcao(campo)
+			{
+				// Pelo nome do campo, descobrimos o seu indice e se o campo &eacute; ano, mes, ou dia
+				var listaParte = campo.name.split("_");
+				var tipoCampo = listaParte[0];
+				var indice = new Number(listaParte[1]);
+				var valorCampo = converterDataStringSemBarraEmDataObjeto(campo.value);
+				if (tipoCampo == 'dataInicioInterrupcao')
+				{
+					calculadoraPrescricaoObjeto.listaInterrupcao[indice].dataInicio = valorCampo;
+				}	
+				
+				if (tipoCampo == 'dataFimInterrupcao')
+				{
+					calculadoraPrescricaoObjeto.listaInterrupcao[indice].dataFim = valorCampo;
+				}	
+				
+				atualizarTotalInterrupcao();
+				atualizarPenaCumprida();
+			}
+			
+			function atualizarListaRemicao(campo)
+			{
+				// Pelo nome do campo, descobrimos o seu indice e se o campo &eacute; ano, mes, ou dia
+				var listaParte = campo.name.split("_");
+				var tipoCampo = listaParte[0];
+				var indice = new Number(listaParte[1]);
+				
+				
+				if (tipoCampo == 'remicao')
+				{
+					var valorCampo = new Number(campo.value);
+					calculadoraPrescricaoObjeto.listaRemicao[indice].qtdDia = valorCampo;
+				}	
+				
+				atualizarTotalRemicao();
+				atualizarPenaCumprida();				
+			}
+			
+			
+			function atualizarPenaCumprida()
+			{
+			}
+			
+						
+			function atualizarTotalDetracao()
+			{
+				var anoMesDiaTotalDetracao = calculadoraPrescricaoObjeto.calcularTotalDetracao();
+				
+				document.getElementById('totalDetracao').innerText = '(' + anoMesDiaTotalDetracao.ano + 'a' + anoMesDiaTotalDetracao.mes + 'm' + anoMesDiaTotalDetracao.dia + 'd)';
+				document.getElementById('totalDetracao').textContent = '(' + anoMesDiaTotalDetracao.ano + 'a' + anoMesDiaTotalDetracao.mes + 'm' + anoMesDiaTotalDetracao.dia + 'd)';				
+			}
+			
+			function atualizarTotalInterrupcao()
+			{
+				var anoMesDiaTotalInterrupcao = calculadoraPrescricaoObjeto.calcularTotalInterrupcao();
+				
+				document.getElementById('totalInterrupcao').innerText = '(' + anoMesDiaTotalInterrupcao.ano + 'a' + anoMesDiaTotalInterrupcao.mes + 'm' + anoMesDiaTotalInterrupcao.dia + 'd)';
+				document.getElementById('totalInterrupcao').textContent = '(' + anoMesDiaTotalInterrupcao.ano + 'a' + anoMesDiaTotalInterrupcao.mes + 'm' + anoMesDiaTotalInterrupcao.dia + 'd)';				
+			}
+			
+			function atualizarTotalRemicao()
+			{
+				var totalDiasRemicao = calculadoraPrescricaoObjeto.calcularTotalRemicao();
+				
+				document.getElementById('totalRemicao').innerText = '(' + totalDiasRemicao + ' dias)';
+				document.getElementById('totalRemicao').textContent = '(' + totalDiasRemicao + ' dias)';				
+			}
+			
+			
+			function adicionarCampoDetracaoInterrupcao(nomeCampo)
+			{			
+				var tabelaCorpo = document.getElementById('tabelaCorpo');				
+			
+				var tbody = document.createElement('tbody');
+				var linha = document.createElement('tr');
+				
+				var coluna1 = document.createElement('td');
+				coluna1.setAttribute('class', 'paragrafo01');
+				
+				var coluna2 = document.createElement('td');				
+				coluna2.setAttribute('class', 'paragrafo02');
+				
+				var coluna3 = document.createElement('td');	
+				coluna3.setAttribute('class', 'paragrafo02');				
+
+				linha.appendChild(coluna1);
+				linha.appendChild(coluna2);
+				linha.appendChild(coluna3);				
+
+				var input1 = document.createElement('input');
+				
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					input1.onkeypress=function(event)
+					{
+						return validaConteudo(event);
+					}
+				}
+				else
+				{
+					input1.onkeypress=function()
+					{
+						return validaConteudo(window.event);
+					}
+				}
+				
+				
+				input1.onfocus=function() 
+				{             
+					removeCaracs(this,'date');
+				} 
+				input1.onblur=function()
+				{
+					return(formatCamp(this, 'date'));	
+				}	
+				
+				input1.setAttribute('class', 'formularios');
+				input1.setAttribute('className', 'formularios');				
+				input1.setAttribute('type', 'text');
+				input1.setAttribute('size', '12');
+				input1.setAttribute('maxLength', '8');
+				input1.value = '';
+
+				var input2 = document.createElement('input');
+				
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					input2.onkeypress=function(event)
+					{
+						return validaConteudo(event);
+					}
+				}
+				else
+				{
+					input2.onkeypress=function()
+					{
+						return validaConteudo(window.event);
+					}
+				}
+				
+				
+				input2.onfocus=function() 
+				{             
+					removeCaracs(this,'date');
+				} 
+				input2.onblur=function()
+				{
+					return(formatCamp(this, 'date'));	
+				}	
+				input2.setAttribute('class', 'formularios');
+				input2.setAttribute('className', 'formularios');				
+				input2.setAttribute('type', 'text');
+				input2.setAttribute('size', '12');
+				input2.setAttribute('maxLength', '8');
+				input2.value = '';
+			
+				var input3 = document.createElement('input');
+				input3.setAttribute('class', 'botao');
+				input3.setAttribute('className', 'botao');		
+				input3.setAttribute('type', 'button');		
+				input3.value = 'Excluir';
+				     
+				input3.onclick=function() 
+				{             
+					excluirCampoDetracaoInterrupcao(this);
+				} 
+				
+				var inputDescricaoProcesso = document.createElement('input');
+				inputDescricaoProcesso.setAttribute('class', 'formularios');
+				inputDescricaoProcesso.setAttribute('className', 'formularios');				
+				inputDescricaoProcesso.setAttribute('type', 'text');
+				inputDescricaoProcesso.setAttribute('size', '10');
+				inputDescricaoProcesso.setAttribute('maxLength', '20');
+				inputDescricaoProcesso.value = '';
+				
+				inputDescricaoProcesso.onchange=function() 
+				{             
+					atualizarListaDetracao(this);
+				}  					
+			
+				
+				if (nomeCampo == 'campoDetracao')
+				{
+					var indiceDetracao = new Number(calculadoraPrescricaoObjeto.listaDetracao.length); 
+					linha.setAttribute('name', 'linhaDetracao_' + indiceDetracao);
+					linha.setAttribute('id', 'linhaDetracao_' + indiceDetracao);
+					input1.onchange=function() 
+					{             
+						atualizarListaDetracao(this);
+					}  
+					input1.setAttribute('name', 'dataInicioDetracao_' + indiceDetracao);
+					input1.setAttribute('id', 'dataInicioDetracao_' + indiceDetracao);
+
+					input2.onchange=function() 
+					{             
+						atualizarListaDetracao(this);
+					}  
+					input2.setAttribute('name', 'dataFimDetracao_' + indiceDetracao);
+					input2.setAttribute('id', 'dataFimDetracao_' + indiceDetracao);
+					
+					input3.setAttribute('name', 'botaoExcluirDetracao_' + indiceDetracao);
+					input3.setAttribute('id', 'botaoExcluirDetracao_' + indiceDetracao);
+					
+					// INCLUINDO CAMPO DESCRICAO DO PROCESSO	
+					
+					inputDescricaoProcesso.setAttribute('name', 'descricaoProcessoDetracao_' + indiceDetracao);
+					inputDescricaoProcesso.setAttribute('id', 'descricaoProcessoDetracao_' + indiceDetracao);
+					
+					var label5 = document.createElement('label');
+					label5.id = 'resultadoPeriodoDetracao_' + indiceDetracao;
+					label5.innerText = ' ';
+					label5.textContent = ' ';
+					
+					calculadoraPrescricaoObjeto.listaDetracao[indiceDetracao] = new Periodo(null, null, null);
+				}	
+				else if (nomeCampo == 'campoInterrupcao')
+				{
+					var indiceInterrupcao = new Number(calculadoraPrescricaoObjeto.listaInterrupcao.length); 
+					linha.setAttribute('name', 'linhaInterrupcao_' + indiceInterrupcao);
+					linha.setAttribute('id', 'linhaInterrupcao_' + indiceInterrupcao);
+					input1.onchange=function() 
+					{             
+						atualizarListaInterrupcao(this);
+					}  
+					input1.setAttribute('name', 'dataInicioInterrupcao_' + indiceInterrupcao);
+					input1.setAttribute('id', 'dataInicioInterrupcao_' + indiceInterrupcao);
+					
+					input2.onchange=function() 
+					{             
+						atualizarListaInterrupcao(this);
+					}  
+
+					input2.setAttribute('name', 'dataFimInterrupcao_' + indiceInterrupcao);
+					input2.setAttribute('id', 'dataFimInterrupcao_' + indiceInterrupcao);
+					
+					input3.setAttribute('name', 'botaoExcluirInterrupcao_' + indiceInterrupcao);
+					input3.setAttribute('id', 'botaoExcluirInterrupcao_' + indiceInterrupcao);
+					
+					calculadoraPrescricaoObjeto.listaInterrupcao[indiceInterrupcao] = new Periodo(null, null, null);
+				}	
+				
+				var referencia = document.getElementById(nomeCampo);	
+				tabelaCorpo.insertBefore(linha, referencia);	
+				
+				
+				coluna2.appendChild(input1);
+				var label = document.createElement('label');								
+				label.innerText = ' a ';
+				label.textContent = ' a ';
+				label.setAttribute('className', 'paragrafo02');
+				
+				var label1 = document.createElement('label');
+				label1.innerText = ' ';
+				label1.textContent = ' ';
+				
+				coluna2.appendChild(label);
+				coluna2.appendChild(input2);
+
+				
+				if (nomeCampo == 'campoDetracao')
+				{
+					var label2 = document.createElement('label');
+					label2.innerText = ' ';
+					label2.textContent = ' ';
+					coluna2.appendChild(label2);
+					coluna2.appendChild(inputDescricaoProcesso);
+					
+					var label3 = document.createElement('label');
+					label3.innerText = ' ';
+					label3.textContent = ' ';
+					coluna2.appendChild(label3);
+					
+					var span = document.createElement('span');
+					
+					if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+					{
+						span.onmouseover=function(event)
+						{
+							mostrarHint('Informe o n&uacute;mero do processo de conhecimento.', this, event, '250px');
+						}
+					}
+					else
+					{
+						span.onmouseover=function()
+						{
+							mostrarHint('Informe o n&uacute;mero do processo de conhecimento.', this, window.event, '250px');
+						}
+					}
+
+					span.href = '#';
+					span.innerHTML = '<img alt="" src="./images/ajuda.png" height="15px" width="15px">';
+					coluna2.appendChild(span);
+					
+					var label4 = document.createElement('label');
+					label4.innerText = ' ';
+					label4.textContent = ' ';
+					coluna2.appendChild(label4);
+					
+					
+					
+					
+					
+				}
+				
+				coluna2.appendChild(label1);
+				coluna2.appendChild(input3);
+				
+				if (nomeCampo == 'campoDetracao')
+				{
+					coluna2.appendChild(label5);
+				}
+			}
+			
+			
+			
+			function adicionarCampoCondenacao(nomeCampo)
+			{			
+				var tabelaCorpoInterna = document.getElementById('tabelaCorpoCondenacao');	
+				var linhaTabelaInterna = document.createElement('tr');
+
+				var colunaTabelaInterna1 = document.createElement('td');
+				colunaTabelaInterna1.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna1.setAttribute('nowrap', true);
+
+				var colunaTabelaInterna2 = document.createElement('td');
+				colunaTabelaInterna2.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna2.setAttribute('nowrap', true);
+
+				var colunaTabelaInterna3 = document.createElement('td');
+				colunaTabelaInterna3.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna3.setAttribute('nowrap', true);
+
+				var colunaTabelaInterna4 = document.createElement('td');
+				colunaTabelaInterna4.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna4.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna5 = document.createElement('td');
+				colunaTabelaInterna5.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna5.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna6 = document.createElement('td');
+				colunaTabelaInterna6.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna6.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna7 = document.createElement('td');
+				colunaTabelaInterna7.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna7.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna8 = document.createElement('td');
+				colunaTabelaInterna8.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna8.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna9 = document.createElement('td');
+				colunaTabelaInterna9.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna9.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna10 = document.createElement('td');
+				colunaTabelaInterna10.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna10.setAttribute('nowrap', true);
+
+				var colunaTabelaInterna11 = document.createElement('td');
+				colunaTabelaInterna11.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna11.setAttribute('nowrap', true);
+
+				var colunaTabelaInterna12 = document.createElement('td');
+				colunaTabelaInterna12.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna12.setAttribute('nowrap', true);
+				
+				var colunaTabelaInterna13 = document.createElement('td');
+				colunaTabelaInterna13.setAttribute('class', 'paragrafo02');
+				colunaTabelaInterna13.setAttribute('nowrap', true);
+
+				
+				linhaTabelaInterna.appendChild(colunaTabelaInterna1);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna2);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna3);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna4);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna5);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna6);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna7);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna8);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna9);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna10);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna11);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna12);
+				linhaTabelaInterna.appendChild(colunaTabelaInterna13);
+
+				// NUMERANDO AS LINHAS	
+				var indiceCondenacao = new Number(calculadoraPrescricaoObjeto.listaCondenacao.length); 
+				linhaTabelaInterna.setAttribute('name', 'linhaCondenacao_' + indiceCondenacao);
+				linhaTabelaInterna.setAttribute('id', 'linhaCondenacao_' + indiceCondenacao);
+
+				
+				// INCLUINDO CAMPO GRAVIDADE
+				var inputGravidade = document.createElement('input');
+				inputGravidade.setAttribute('class', 'formularioObrigatorio');
+				inputGravidade.setAttribute('className', 'formularioObrigatorio');		
+				inputGravidade.setAttribute('type', 'text');		
+				inputGravidade.setAttribute('size', '3');
+				inputGravidade.setAttribute('maxLength', '3');
+				inputGravidade.value = '1';
+				inputGravidade.setAttribute('name', 'gravidade_' + indiceCondenacao);
+				inputGravidade.setAttribute('id', 'gravidade_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputGravidade.onkeypress=function(event)
+					{
+						return validaConteudo(event, this, 'numeric');
+					}
+				}
+				else
+				{
+					inputGravidade.onkeypress=function()
+					{
+						return validaConteudo(window.event, this, 'numeric');
+					}
+				}
+				
+				
+				inputGravidade.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}
+				colunaTabelaInterna1.appendChild(inputGravidade);				
+				
+				// INCLUINDO CAMPO DESCRICAO DO PROCESSO	
+				var inputDescricaoProcesso = document.createElement('input');
+				inputDescricaoProcesso.setAttribute('class', 'formularios');
+				inputDescricaoProcesso.setAttribute('className', 'formularios');				
+				inputDescricaoProcesso.setAttribute('type', 'text');
+				inputDescricaoProcesso.setAttribute('size', '10');
+				inputDescricaoProcesso.setAttribute('maxLength', '20');
+				inputDescricaoProcesso.value = '';
+				inputDescricaoProcesso.setAttribute('name', 'descricaoProcessoCondenacao_' + indiceCondenacao);
+				inputDescricaoProcesso.setAttribute('id', 'descricaoProcessoCondenacao_' + indiceCondenacao);
+				inputDescricaoProcesso.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+				colunaTabelaInterna2.appendChild(inputDescricaoProcesso);
+
+				
+				// INCLUINDO ANO, MES E DIA DA PENA
+				var inputAnoPena = document.createElement('input');
+				inputAnoPena.setAttribute('class', 'formularioObrigatorio');
+				inputAnoPena.setAttribute('className', 'formularioObrigatorio');		
+				inputAnoPena.setAttribute('type', 'text');		
+				inputAnoPena.setAttribute('size', '3');
+				inputAnoPena.setAttribute('maxLength', '3');
+				inputAnoPena.value = '0';
+				inputAnoPena.setAttribute('name', 'anoPenaImpostaCondenacao_' + indiceCondenacao);
+				inputAnoPena.setAttribute('id', 'anoPenaImpostaCondenacao_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputAnoPena.onkeypress=function(event)
+					{
+						return validaConteudo(event, this, 'numeric');
+					}
+				}
+				else
+				{
+					inputAnoPena.onkeypress=function()
+					{
+						return validaConteudo(window.event, this, 'numeric');
+					}
+				}
+				
+				inputAnoPena.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				} 
+				
+				var inputMesPena = document.createElement('input');
+				inputMesPena.setAttribute('class', 'formularioObrigatorio');
+				inputMesPena.setAttribute('className', 'formularioObrigatorio');		
+				inputMesPena.setAttribute('type', 'text');		
+				inputMesPena.setAttribute('size', '2');
+				inputMesPena.setAttribute('maxLength', '2');
+				inputMesPena.value = '0';
+				inputMesPena.setAttribute('name', 'mesPenaImpostaCondenacao_' + indiceCondenacao);
+				inputMesPena.setAttribute('id', 'mesPenaImpostaCondenacao_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputMesPena.onkeypress=function(event)
+					{
+						return validaConteudo(event, this, 'numeric');
+					}
+				}
+				else
+				{
+					inputMesPena.onkeypress=function()
+					{
+						return validaConteudo(window.event, this, 'numeric');
+					}
+				}
+				
+				
+				inputMesPena.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				} 
+				var inputDiaPena = document.createElement('input');
+				inputDiaPena.setAttribute('class', 'formularioObrigatorio');
+				inputDiaPena.setAttribute('className', 'formularioObrigatorio');		
+				inputDiaPena.setAttribute('type', 'text');		
+				inputDiaPena.setAttribute('size', '2');
+				inputDiaPena.setAttribute('maxLength', '2');
+				inputDiaPena.value = '0';
+				inputDiaPena.setAttribute('name', 'diaPenaImpostaCondenacao_' + indiceCondenacao);
+				inputDiaPena.setAttribute('id', 'diaPenaImpostaCondenacao_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputDiaPena.onkeypress=function(event)
+					{
+						return validaConteudo(event, this, 'numeric');
+					}
+				}
+				else
+				{
+					inputDiaPena.onkeypress=function()
+					{
+						return validaConteudo(window.event, this, 'numeric');
+					}
+				}
+
+				inputDiaPena.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				} 
+
+				var labelAno = document.createElement('label');								
+				labelAno.innerText = 'a';
+				labelAno.textContent = 'a';
+				labelAno.setAttribute('class', 'paragrafo02');
+				labelAno.setAttribute('className', 'paragrafo02');
+				
+				var labelMes = document.createElement('label');								
+				labelMes.innerText = 'm';
+				labelMes.textContent = 'm';
+				labelMes.setAttribute('class', 'paragrafo02');
+				labelMes.setAttribute('className', 'paragrafo02');
+				
+				var labelDia = document.createElement('label');								
+				labelDia.innerText = 'd' ;
+				labelDia.textContent = 'd';
+				labelDia.setAttribute('class', 'paragrafo02');
+				labelDia.setAttribute('className', 'paragrafo02');
+								
+				colunaTabelaInterna3.appendChild(inputAnoPena);
+				colunaTabelaInterna3.appendChild(labelAno);
+				colunaTabelaInterna3.appendChild(inputMesPena);
+				colunaTabelaInterna3.appendChild(labelMes);
+				colunaTabelaInterna3.appendChild(inputDiaPena);
+				colunaTabelaInterna3.appendChild(labelDia);
+				
+				// CAMPO DATA DE CONDENACAO
+				var inputDataCondenacao = document.createElement('input');
+				inputDataCondenacao.setAttribute('class', 'formularioObrigatorio');
+				inputDataCondenacao.setAttribute('className', 'formularioObrigatorio');				
+				inputDataCondenacao.setAttribute('type', 'text');
+				inputDataCondenacao.setAttribute('size', '12');
+				inputDataCondenacao.setAttribute('maxLength', '8');
+				inputDataCondenacao.value = '';
+				inputDataCondenacao.setAttribute('name', 'dataCondenacao_' + indiceCondenacao);
+				inputDataCondenacao.setAttribute('id', 'dataCondenacao_' + indiceCondenacao);
+
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputDataCondenacao.onkeypress=function(event)
+					{
+						return validaConteudo(event);
+					}
+				}
+				else
+				{
+					inputDataCondenacao.onkeypress=function()
+					{
+						return validaConteudo(window.event);
+					}
+				}
+				
+				
+				inputDataCondenacao.onfocus=function() 
+				{             
+					removeCaracs(this,'date');
+				} 
+				inputDataCondenacao.onblur=function()
+				{
+					return(formatCamp(this, 'date'));	
+				}	
+				inputDataCondenacao.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+
+				colunaTabelaInterna4.appendChild(inputDataCondenacao);
+
+				// CAMPO DATA DO FATO
+				var inputDataFato = document.createElement('input');
+				inputDataFato.setAttribute('class', 'formularioObrigatorio');
+				inputDataFato.setAttribute('className', 'formularioObrigatorio');				
+				inputDataFato.setAttribute('type', 'text');
+				inputDataFato.setAttribute('size', '12');
+				inputDataFato.setAttribute('maxLength', '8');
+				inputDataFato.value = '';
+				inputDataFato.setAttribute('name', 'dataFatoCondenacao_' + indiceCondenacao);
+				inputDataFato.setAttribute('id', 'dataFatoCondenacao_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputDataFato.onkeypress=function(event)
+					{
+						return validaConteudo(event);
+					}
+				}
+				else
+				{
+					inputDataFato.onkeypress=function()
+					{
+						return validaConteudo(window.event);
+					}
+				}
+				
+				inputDataFato.onfocus=function() 
+				{             
+					removeCaracs(this,'date');
+				} 
+				inputDataFato.onblur=function()
+				{
+					return(formatCamp(this, 'date'));	
+				}	
+				inputDataFato.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+				colunaTabelaInterna5.appendChild(inputDataFato);
+
+				
+				// CAMPO DA DATA DE SENTENCA
+				var inputDataSentenca = document.createElement('input');
+				inputDataSentenca.setAttribute('class', 'formularioObrigatorio');
+				inputDataSentenca.setAttribute('className', 'formularioObrigatorio');				
+				inputDataSentenca.setAttribute('type', 'text');
+				inputDataSentenca.setAttribute('size', '12');
+				inputDataSentenca.setAttribute('maxLength', '8');
+				inputDataSentenca.value = '';
+				inputDataSentenca.setAttribute('name', 'dataSentencaCondenacao_' + indiceCondenacao);
+				inputDataSentenca.setAttribute('id', 'dataSentencaCondenacao_' + indiceCondenacao);
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{
+					inputDataSentenca.onkeypress=function(event)
+					{
+						return validaConteudo(event);
+					}
+				}
+				else
+				{
+					inputDataSentenca.onkeypress=function()
+					{
+						return validaConteudo(window.event);
+					}
+				}
+				
+				inputDataSentenca.onfocus=function() 
+				{             
+					removeCaracs(this,'date');
+				} 
+				inputDataSentenca.onblur=function()
+				{
+					return(formatCamp(this, 'date'));	
+				}	
+				inputDataSentenca.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+				colunaTabelaInterna6.appendChild(inputDataSentenca);				
+				
+				// Faixa etaria	
+				var selectFaixaEtaria = document.createElement('select');
+				selectFaixaEtaria.setAttribute('class', 'paragrafo02');
+				selectFaixaEtaria.setAttribute('className', 'paragrafo02');								
+				selectFaixaEtaria.setAttribute('name', 'faixaEtariaCondenacao_' + indiceCondenacao);
+				selectFaixaEtaria.setAttribute('id', 'faixaEtariaCondenacao_' + indiceCondenacao);
+				selectFaixaEtaria.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{	
+					var optionFaixaEtariaVazia = document.createElement('option');
+					optionFaixaEtariaVazia.value = '';
+					optionFaixaEtariaVazia.text = 'selecione';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaVazia);
+					
+					var optionFaixaEtariaMenor21 = document.createElement('option');
+					optionFaixaEtariaMenor21.value = 'menor21';
+					optionFaixaEtariaMenor21.text = '<21';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMenor21);
+					
+					var optionFaixaEtariaMaior21Menor70 = document.createElement('option');
+					optionFaixaEtariaMaior21Menor70.value = 'maior21Menor70';
+					optionFaixaEtariaMaior21Menor70.text = '>=21 e <=70';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMaior21Menor70);
+					
+					var optionFaixaEtariaMaior70 = document.createElement('option');
+					optionFaixaEtariaMaior70.value = 'maior70';
+					optionFaixaEtariaMaior70.text = '>70';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMaior70);
+				}
+				else
+				{
+					var optionFaixaEtariaVazia = document.createElement('option');
+					optionFaixaEtariaVazia.value = '';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaVazia);
+					
+					var labelFaixaEtariaVazia = document.createElement('label');								
+					labelFaixaEtariaVazia.innerHTML = 'selecione';
+					optionFaixaEtariaVazia.appendChild(labelFaixaEtariaVazia);
+					
+					var optionFaixaEtariaMenor21 = document.createElement('option');
+					optionFaixaEtariaMenor21.value = 'menor21';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMenor21);
+					
+					var labelFaixaEtariaMenor21 = document.createElement('label');								
+					labelFaixaEtariaMenor21.innerText = '<21';
+					labelFaixaEtariaMenor21.textContent = '<21';
+					optionFaixaEtariaMenor21.appendChild(labelFaixaEtariaMenor21);
+					
+					var optionFaixaEtariaMaior21Menor70 = document.createElement('option');
+					optionFaixaEtariaMaior21Menor70.value = 'maior21Menor70';
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMaior21Menor70);
+					
+					var labelFaixaEtariaMaior21Menor70 = document.createElement('label');								
+					labelFaixaEtariaMaior21Menor70.innerText = '>=21 e <=70';
+					labelFaixaEtariaMaior21Menor70.textContent = '>=21 e <=70';
+					optionFaixaEtariaMaior21Menor70.appendChild(labelFaixaEtariaMaior21Menor70);
+					
+					var optionFaixaEtariaMaior70 = document.createElement('option');
+					optionFaixaEtariaMaior70.value = 'maior70';				
+					selectFaixaEtaria.appendChild(optionFaixaEtariaMaior70);
+					
+					var labelFaixaEtariaMaior70 = document.createElement('label');								
+					labelFaixaEtariaMaior70.innerText = '>70';
+					labelFaixaEtariaMaior70.textContent = '>70';
+					optionFaixaEtariaMaior70.appendChild(labelFaixaEtariaMaior70);
+				}
+
+				
+				selectFaixaEtaria.value = '';
+
+				colunaTabelaInterna7.appendChild(selectFaixaEtaria);
+				
+				// Reincidente ---------------
+				
+				var selectReincidente = document.createElement('select');
+				selectReincidente.setAttribute('class', 'paragrafo02');
+				selectReincidente.setAttribute('className', 'paragrafo02');								
+				selectReincidente.setAttribute('name', 'ehReincidenteCondenacao_' + indiceCondenacao);
+				selectReincidente.setAttribute('id', 'ehReincidenteCondenacao_' + indiceCondenacao);
+				
+				selectReincidente.onchange=function() 
+				{             
+					atualizarListaCondenacao(this);
+				}  
+				
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Mozilla
+				{	
+					var optionReincidenteVazia = document.createElement('option');
+					optionReincidenteVazia.value = '';
+					optionReincidenteVazia.text = 'selecione';
+					selectReincidente.appendChild(optionReincidenteVazia);
+					
+					var optionReincidenteSim = document.createElement('option');
+					optionReincidenteSim.value = 'sim';
+					optionReincidenteSim.text = 'Sim';
+					selectReincidente.appendChild(optionReincidenteSim);
+					
+					var optionReincidenteNao = document.createElement('option');
+					optionReincidenteNao.value = 'nao';
+					optionReincidenteNao.text = 'Nao';
+					selectReincidente.appendChild(optionReincidenteNao);
+				}
+				else
+				{
+					var optionReincidenteVazia = document.createElement('option');
+					optionReincidenteVazia.value = '';
+					selectReincidente.appendChild(optionReincidenteVazia);
+					
+					var labelReincidenteVazia = document.createElement('label');								
+					labelReincidenteVazia.innerHTML = 'selecione';
+					optionReincidenteVazia.appendChild(labelReincidenteVazia);
+					
+					var optionReincidenteSim = document.createElement('option');
+					optionReincidenteSim.value = 'sim';
+					selectReincidente.appendChild(optionReincidenteSim);
+					
+					var labelReincidenteSim = document.createElement('label');								
+					labelReincidenteSim.innerText = 'Sim';
+					labelReincidenteSim.textContent = 'Sim';
+					optionReincidenteSim.appendChild(labelReincidenteSim);
+					
+					var optionReincidenteNao = document.createElement('option');
+					optionReincidenteNao.value = 'nao';
+					selectReincidente.appendChild(optionReincidenteNao);
+					
+					var labelReincidenteNao = document.createElement('label');								
+					labelReincidenteNao.innerText = 'Nao';
+					labelReincidenteNao.textContent = 'Nao';
+					optionReincidenteNao.appendChild(labelReincidenteNao);
+				}
+
+				
+				selectReincidente.value = '';
+
+				colunaTabelaInterna8.appendChild(selectReincidente);
+				
+				//-------------------------
+								
+				
+				var labelRestantePena = document.createElement('label');								
+				labelRestantePena.innerText = '0a0m0d';
+				labelRestantePena.textContent = '0a0m0d';
+				labelRestantePena.setAttribute('className', 'paragrafo02');
+				labelRestantePena.setAttribute('id', 'restantePenaCondenacao_' + indiceCondenacao);
+				
+				colunaTabelaInterna9.appendChild(labelRestantePena);		
+								
+				var labelPrazoPrescricional = document.createElement('label');								
+				labelPrazoPrescricional.innerHTML = '0a0m0d';
+				labelPrazoPrescricional.setAttribute('className', 'paragrafo02');
+				labelPrazoPrescricional.setAttribute('id', 'prazoPrescricionalCondenacao_' + indiceCondenacao);				
+
+				colunaTabelaInterna10.appendChild(labelPrazoPrescricional);		
+				
+				var labelDataValidade = document.createElement('label');								
+				labelDataValidade.innerHTML = '&nbsp;';
+				labelDataValidade.setAttribute('className', 'paragrafo02');
+				labelDataValidade.setAttribute('id', 'dataValidadeCondenacao_' + indiceCondenacao);				
+
+				colunaTabelaInterna11.appendChild(labelDataValidade);		
+				
+				
+				var labelSituacao = document.createElement('label');								
+				labelSituacao.innerText = 'Sem Situacao';
+				labelSituacao.textContent = 'Sem Situacao';
+				labelSituacao.setAttribute('className', 'paragrafo02');
+				labelSituacao.setAttribute('id', 'situacaoCondenacao_' + indiceCondenacao);
+				labelSituacao.setAttribute('nowrap', true);
+				
+				colunaTabelaInterna12.appendChild(labelSituacao);		
+				
+				var inputBotaoExcluir = document.createElement('input');
+				inputBotaoExcluir.setAttribute('class', 'botao');
+				inputBotaoExcluir.setAttribute('className', 'botao');		
+				inputBotaoExcluir.setAttribute('type', 'button');		
+				inputBotaoExcluir.value = 'Excluir';
+				inputBotaoExcluir.setAttribute('name', 'botaoExcluirCondenacao_' + indiceCondenacao);
+				inputBotaoExcluir.setAttribute('id', 'botaoExcluirCondenacao_' + indiceCondenacao);
+				     
+				inputBotaoExcluir.onclick=function() 
+				{             
+					excluirCampoCondenacao(this);
+				} 
+				colunaTabelaInterna13.appendChild(inputBotaoExcluir);
+				
+				
+				calculadoraPrescricaoObjeto.listaCondenacao[indiceCondenacao] =  new Condenacao(1, null, '', null, null, false, '', new AnoMesDia(0,0,0), null, null, '');
+				
+				var referencia = document.getElementById(nomeCampo);	
+				tabelaCorpoInterna.insertBefore(linhaTabelaInterna, referencia);	
+				
+			}
+			
+					
+			function adicionarCampoRemicao(nomeCampo)
+			{
+
+				var tabelaCorpo = document.getElementById('tabelaCorpo');				
+			
+				var tbody = document.createElement('tbody');
+				var linha = document.createElement('tr');
+				
+				var coluna1 = document.createElement('td');
+				coluna1.setAttribute('class', 'paragrafo01');
+				
+				var coluna2 = document.createElement('td');				
+				coluna2.setAttribute('class', 'paragrafo02');
+				
+				var coluna3 = document.createElement('td');	
+				coluna3.setAttribute('class', 'paragrafo02');				
+				
+				
+				//var elementoObjetoRemicaoDias = document.getElementById('remicaoDias1');
+				//var input1 = elementoObjetoRemicaoDias.cloneNode(true);
+				var input1 = document.createElement('input');
+				input1.setAttribute('class', 'formularios');
+				input1.setAttribute('className', 'formularios');		
+				input1.setAttribute('type', 'text');		
+				input1.setAttribute('size', '5');
+				input1.setAttribute('maxLength', '5');
+				input1.value = '';
+				
+				input1.onkeypress=function() 
+				{             
+					return(validaConteudo(event, this, 'numeric'));
+				}  
+				input1.onchange=function() 
+				{             
+					atualizarListaRemicao(this);
+				} 
+				
+				
+				var input2 = document.createElement('input');
+				input2.setAttribute('class', 'botao');
+				input2.setAttribute('className', 'botao');		
+				input2.setAttribute('type', 'button');		
+				input2.value = 'Excluir';
+				
+				input2.onclick=function() 
+				{             
+					excluirCampoRemicao(this);
+				} 
+				
+				var label2 = document.createElement('label');								
+				label2.innerText = '�';
+				label2.textContent = '�';
+				label2.setAttribute('className', 'paragrafo02');
+				
+															
+				linha.appendChild(coluna1);
+				linha.appendChild(coluna2);
+				linha.appendChild(coluna3);				
+
+				var indiceRemicao = new Number(calculadoraPrescricaoObjeto.listaRemicao.length); 
+
+				linha.setAttribute('id', 'linhaRemicao_' + indiceRemicao);
+				input1.setAttribute('name', 'remicao_' + indiceRemicao);
+				input1.setAttribute('id', 'remicao_' + indiceRemicao);
+				input1.value = '0';
+				
+				input2.setAttribute('name', 'botaoExcluirRemicao_' + indiceRemicao);
+				input2.setAttribute('id', 'botaoExcluirRemicao_' + indiceRemicao);
+
+				
+				var referencia = document.getElementById(nomeCampo);	
+				tabelaCorpo.insertBefore(linha, referencia);	
+				
+				coluna2.appendChild(input1);	
+				coluna2.appendChild(label2);		
+				coluna2.appendChild(input2);	
+
+				
+				//Incluindo na lista mais um objeto de Remicao
+				calculadoraPrescricaoObjeto.listaRemicao[indiceRemicao] = new Remicao(0);
+				
+			}
+			
+			function excluirCampoCondenacao(botaoExcluirCondenacao)
+			{
+				var listaParte = botaoExcluirCondenacao.getAttribute('id').split("_");
+				var nomeCampo = listaParte[0];
+				var indiceCondenacao = new Number(listaParte[1]);
+				
+				var tamanhoLista = new Number(calculadoraPrescricaoObjeto.listaCondenacao.length);
+					
+				if (tamanhoLista == 1)
+				{
+					document.calculoPrescricao.descricaoProcessoCondenacao_0.value = '';
+					document.calculoPrescricao.anoPenaImpostaCondenacao_0.value = '0';
+					document.calculoPrescricao.mesPenaImpostaCondenacao_0.value = '0';
+					document.calculoPrescricao.diaPenaImpostaCondenacao_0.value = '0';
+					document.calculoPrescricao.dataFatoCondenacao_0.value = '';
+					document.calculoPrescricao.dataSentencaCondenacao_0.value = '';
+					document.calculoPrescricao.faixaEtariaCondenacao_0.value = '';
+					document.calculoPrescricao.ehReincidenteCondenacao_0.value = '';										
+					document.getElementById('restantePenaCondenacao_0').innerHTML = '0a0m0d';
+					document.getElementById('prazoPrescricionalCondenacao_0').innerHTML = '0a0m0d';
+					document.getElementById('dataValidadeCondenacao_0').innerHTML = '&nbsp;';
+					document.getElementById('situacaoCondenacao_0').innerHTML = 'Sem Situacao';
+
+					calculadoraPrescricaoObjeto.listaCondenacao[0].descricaoProcesso = '';
+					calculadoraPrescricaoObjeto.listaCondenacao[0].anoMesDiaPenaImposta = null;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].dataFato = null;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].dataSentenca = null;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].faixaEtaria = '';
+					calculadoraPrescricaoObjeto.listaCondenacao[0].ehReincidente  = false;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].anoMesDiaPenaImposta = new AnoMesDia(0, 0, 0);					
+					calculadoraPrescricaoObjeto.listaCondenacao[0].prazoPrescricional = null;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].dataValidade = null;
+					calculadoraPrescricaoObjeto.listaCondenacao[0].anoMesDiaPenaRestante = new AnoMesDia(0, 0, 0);
+					calculadoraPrescricaoObjeto.listaCondenacao[0].situacao = null;
+
+				}
+				else
+				{	
+					var linhaCondenacao = document.getElementById('linhaCondenacao_' + indiceCondenacao);	
+					var tabelaCorpoCondenacao = document.getElementById('tabelaCorpoCondenacao');
+					
+					//var indiceLinhaEmRelacaoTabelaCorpoCondenacao = linhaCondenacao.rowIndex - 1;
+					tabelaCorpoCondenacao.deleteRow(indiceCondenacao);
+					calculadoraPrescricaoObjeto.listaCondenacao.splice(indiceCondenacao, 1);
+					
+					// Renumera todos
+					for (var i = indiceCondenacao;  i < tamanhoLista-1; i++)
+					{
+						var linha = document.getElementById('linhaCondenacao_' + (i+1));	
+						
+						linha.setAttribute('id', 'linhaCondenacao_' + i);
+						
+						var gravidadeInput = linha.children.item(0).children.item(0);
+						var descricaoProcessoInput = linha.children.item(1).children.item(0);
+						var anoPenaInput = linha.children.item(2).children.item(0);
+						var mesPenaInput = linha.children.item(2).children.item(2);
+						var diaPenaInput = linha.children.item(2).children.item(4);
+						var dataFatoInput = linha.children.item(3).children.item(0);
+						var dataSentencaInput = linha.children.item(4).children.item(0);
+						var faixaEtariaSelect = linha.children.item(5).children.item(0);
+						var ehReincidenteSelect = linha.children.item(6).children.item(0);						
+						var restantePenaLabel = linha.children.item(7).children.item(0);
+						var prazoPrescricionalInput = linha.children.item(8).children.item(0);						
+						var dataValidade = linha.children.item(9).children.item(0);
+						var situacaoLabel = linha.children.item(10).children.item(0);
+						var botaoExcluirCondenacao = linha.children.item(11).children.item(0);
+
+						descricaoProcessoInput.setAttribute('id', 'descricaoProcessoCondenacao_' + i); 
+						anoPenaInput.setAttribute('id', 'anoPenaImpostaCondenacao_' + i); 
+						mesPenaInput.setAttribute('id', 'mesPenaImpostaCondenacao_' + i); 
+						diaPenaInput.setAttribute('id', 'diaPenaImpostaCondenacao_' + i); 
+						dataFatoInput.setAttribute('id', 'dataFatoCondenacao_' + i); 
+						dataSentencaInput.setAttribute('id', 'dataSentencaCondenacao_' + i); 
+						faixaEtariaSelect.setAttribute('id', 'faixaEtariaCondenacao_' + i); 
+						ehReincidenteSelect.setAttribute('id', 'ehReincidenteCondenacao_' + i); 						
+						prazoPrescricionalInput.setAttribute('id', 'prazoPrescricionalCondenacao_' + i); 
+						restantePenaLabel.setAttribute('id', 'restantePenaCondenacao_' + i); 
+						dataValidade.setAttribute('id', 'dataValidadeCondenacao_' + i); 
+						situacaoLabel.setAttribute('id', 'situacaoCondenacao_' + i); 
+						botaoExcluirCondenacao.setAttribute('id', 'botaoExcluirCondenacao_' + i);  
+					}
+				}
+
+			}
+					
+		
+			function excluirCampoDetracaoInterrupcao(botaoExcluirDetracaoInterrupcao)
+			{
+				var listaParte = botaoExcluirDetracaoInterrupcao.getAttribute('id').split("_");
+				var nomeCampo = listaParte[0];
+				var indiceDetracaoInterrupcao = new Number(listaParte[1]);
+				
+				var tamanhoLista = new Number(0);
+				
+				if (nomeCampo == 'botaoExcluirDetracao')
+				{				
+					tamanhoLista = new Number(calculadoraPrescricaoObjeto.listaDetracao.length);
+					
+					if (tamanhoLista == 1)
+					{
+						document.calculoPrescricao.dataInicioDetracao_0.value = '';
+						document.calculoPrescricao.dataFimDetracao_0.value = '';
+						calculadoraPrescricaoObjeto.listaDetracao[0].dataInicio = null;
+						calculadoraPrescricaoObjeto.listaDetracao[0].dataFim = null;						
+					}
+					else
+					{	
+						var linha = document.getElementById('linhaDetracao_' + indiceDetracaoInterrupcao);	
+						var tabelaCorpo = document.getElementById('tabelaCorpo');
+						
+						var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+						tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+						calculadoraPrescricaoObjeto.listaDetracao.splice(indiceDetracaoInterrupcao, 1);
+						
+						// Renumera todos
+						for (var i = indiceDetracaoInterrupcao;  i < tamanhoLista-1; i++)
+						{
+							var linha = document.getElementById('linhaDetracao_' + (i+1));	
+							
+							linha.setAttribute('id', 'linhaDetracao_' + i);
+							var dataInicioDetracaoInput = linha.children.item(1).children.item(0);
+							var dataFimDetracaoInput = linha.children.item(1).children.item(2);
+							var botaoExcluirDetracao = linha.children.item(1).children.item(4);
+							dataInicioDetracaoInput.setAttribute('id', 'dataInicioDetracao_' + i);
+							dataFimDetracaoInput.setAttribute('id', 'dataFimDetracao_' + i);
+							botaoExcluirDetracao.setAttribute('id', 'botaoExcluirDetracao_' + i);
+							dataInicioDetracaoInput.setAttribute('name', 'dataInicioDetracao_' + i);
+							dataFimDetracaoInput.setAttribute('name', 'dataFimDetracao_' + i);
+							botaoExcluirDetracao.setAttribute('name', 'botaoExcluirDetracao_' + i);
+							
+						}
+					}
+					atualizarTotalDetracao();
+				}
+				else if (nomeCampo == 'botaoExcluirInterrupcao')
+				{
+					tamanhoLista = new Number(calculadoraPrescricaoObjeto.listaInterrupcao.length); 
+					
+					if (tamanhoLista == 1)
+					{
+						document.calculoPrescricao.dataInicioInterrupcao_0.value = '';
+						document.calculoPrescricao.dataFimInterrupcao_0.value = '';
+						calculadoraPrescricaoObjeto.listaInterrupcao[0].dataInicio = null;
+						calculadoraPrescricaoObjeto.listaInterrupcao[0].dataFim = null;						
+					}
+					else
+					{	
+						var linha = document.getElementById('linhaInterrupcao_' + indiceDetracaoInterrupcao);	
+						var tabelaCorpo = document.getElementById('tabelaCorpo');
+						
+						var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+						tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+						calculadoraPrescricaoObjeto.listaInterrupcao.splice(indiceDetracaoInterrupcao, 1);
+						
+						// Renumera todos
+						for (var i = indiceDetracaoInterrupcao;  i < tamanhoLista-1; i++)
+						{
+							var linha = document.getElementById('linhaInterrupcao_' + (i+1));	
+							
+							linha.setAttribute('id', 'linhaInterrupcao_' + i);
+							var dataInicioInterrupcaoInput = linha.children.item(1).children.item(0);
+							var dataFimInterrupcaoInput = linha.children.item(1).children.item(2);
+							var botaoExcluirInterrupcao = linha.children.item(1).children.item(4);
+							dataInicioInterrupcaoInput.setAttribute('id', 'dataInicioInterrupcao_' + i);
+							dataFimInterrupcaoInput.setAttribute('id', 'dataFimInterrupcao_' + i);
+							botaoExcluirInterrupcao.setAttribute('id', 'botaoExcluirInterrupcao_' + i);
+							dataInicioInterrupcaoInput.setAttribute('name', 'dataInicioInterrupcao_' + i);
+							dataFimInterrupcaoInput.setAttribute('name', 'dataFimInterrupcao_' + i);
+							botaoExcluirInterrupcao.setAttribute('name', 'botaoExcluirInterrupcao_' + i);
+							
+						}
+					}
+					atualizarTotalInterrupcao();
+				}	
+				atualizarPenaCumprida();				
+			}
+			
+			function excluirCampoRemicao(botaoExcluirRemicao)
+			{
+				var tamanhoListaRemicao = new Number(calculadoraPrescricaoObjeto.listaRemicao.length); 
+			
+				if (tamanhoListaRemicao == 1)
+				{
+					document.calculoPrescricao.remicao_0.value = '0';
+					calculadoraPrescricaoObjeto.listaRemicao[0].qtdDia = 0;
+				}
+				else
+				{	
+					var listaParte = botaoExcluirRemicao.getAttribute('id').split("_");
+					var indiceRemicao = new Number(listaParte[1]);
+					
+					var linha = document.getElementById('linhaRemicao_' + indiceRemicao);	
+					var tabelaCorpo = document.getElementById('tabelaCorpo');
+					
+					var indiceLinhaEmRelacaoTabelaCorpo = linha.rowIndex;
+					tabelaCorpo.deleteRow(indiceLinhaEmRelacaoTabelaCorpo);
+					calculadoraPrescricaoObjeto.listaRemicao.splice(indiceRemicao, 1);
+					
+					// Renumera todos
+					for (var i = indiceRemicao;  i < tamanhoListaRemicao-1; i++)
+					{
+						var linha = document.getElementById('linhaRemicao_' + (i+1));	
+						
+						linha.setAttribute('id', 'linhaRemicao_' + i);
+						var remicaoInput = linha.children.item(1).children.item(0);
+						var botaoExcluirRemicao = linha.children.item(1).children.item(2);
+						remicaoInput.setAttribute('id', 'remicao_' + i);
+						botaoExcluirRemicao.setAttribute('id', 'botaoExcluirRemicao_' + i);
+						remicaoInput.setAttribute('name', 'remicao_' + i);
+						botaoExcluirRemicao.setAttribute('name', 'botaoExcluirRemicao_' + i);
+					}
+				}
+
+				atualizarTotalRemicao();
+				atualizarPenaCumprida();
+			}
+			
+							// pena cumprida acumulada n�o muda
+				// esta funcao vai aumentar pena cumprida usada
+			function distribuirPenaCumprida(listaCondenacao, penaCumpridaAcumulada)
+			{
+				var todaCondenacaoCumprida = false;
+				
+				var sobraPenaCumprida = somarAnoMesDia(penaCumpridaAcumulada, new AnoMesDia(0, 0, 0));
+			
+				while (sobraPenaCumprida.converterEmDias() > 0 && todaCondenacaoCumprida == false)
+				{
+					var condenacaoMaisGrave = null;
+					var gravidade = -1;
+					
+					todaCondenacaoCumprida = true;
+					// busca a mais grave
+					for (var i = 0; i < listaCondenacao.length; i++)
+					{
+						var condenacao = listaCondenacao[i];
+						
+						if (condenacao.gravidade > gravidade && condenacao.calcularPenaRestante().converterEmDias() > 0)
+						{
+							condenacaoMaisGrave = condenacao;
+							gravidade = condenacao.gravidade;
+							todaCondenacaoCumprida = false;
+						}
+					}
+
+					if (condenacaoMaisGrave != null)
+					{
+						var anoMesDiaPenaRestante = condenacaoMaisGrave.calcularPenaRestante();
+						
+						// se a pena restante for maior que toda sobra de pena cumprida, ela ir� absorver.
+						// o balde encheu um pouco mais nao transbordou
+						if (anoMesDiaPenaRestante.converterEmDias() >= sobraPenaCumprida.converterEmDias())
+						{
+							condenacaoMaisGrave.anoMesDiaPenaCumprida = somarAnoMesDia(condenacaoMaisGrave.anoMesDiaPenaCumprida, sobraPenaCumprida);
+							sobraPenaCumprida = new AnoMesDia(0, 0, 0);
+						}
+						// agora o balde vai transbordar
+						else
+						{
+							condenacaoMaisGrave.anoMesDiaPenaCumprida = condenacaoMaisGrave.anoMesDiaPenaImposta;
+							sobraPenaCumprida = subtrairAnoMesDia(sobraPenaCumprida, anoMesDiaPenaRestante);
+						}
+					}
+
+					
+				}	
+				
+				return sobraPenaCumprida;
+			}
+
+			function recarregarObjeto()
+			{
+
+				calculadoraPrescricaoObjeto = new CalculadoraPrescricao();
+
+				calculadoraPrescricaoObjeto.nomeSentenciado = document.getElementById('nomeSentenciado').value;
+				calculadoraPrescricaoObjeto.numeroExecucao = document.getElementById('numeroExecucao').value;
+				calculadoraPrescricaoObjeto.dataNascimento = converterDataStringEmDataObjeto(document.getElementById('dataNascimento').value);
+				calculadoraPrescricaoObjeto.sentenciadoPreso = document.getElementById('sentenciadoPreso').value;
+				
+				var listaDetracao = new Array();
+
+				i = 0;
+				while (document.getElementById('dataInicioDetracao_' + i) != null)
+				{
+					var dataInicioDetracao = converterDataStringEmDataObjeto(document.getElementById('dataInicioDetracao_' + i).value);
+					var dataFimDetracao = converterDataStringEmDataObjeto(document.getElementById('dataFimDetracao_' + i).value);
+					var descricaoProcessoDetracao = document.getElementById('descricaoProcessoDetracao_' + i).value;
+
+					listaDetracao[i] = new Periodo(dataInicioDetracao, dataFimDetracao, descricaoProcessoDetracao);
+					i++;
+				}
+				calculadoraPrescricaoObjeto.listaDetracao = listaDetracao;
+				
+				calculadoraPrescricaoObjeto.dataInicioCumprimento = converterDataStringEmDataObjeto(document.getElementById('dataInicioCumprimento').value);
+
+				var listaInterrupcao = new Array();
+
+				i = 0;
+				while (document.getElementById('dataInicioInterrupcao_' + i) != null)
+				{
+					var dataInicioInterrupcao = converterDataStringEmDataObjeto(document.getElementById('dataInicioInterrupcao_' + i).value);
+					var dataFimInterrupcao = converterDataStringEmDataObjeto(document.getElementById('dataFimInterrupcao_' + i).value);
+
+					listaInterrupcao[i] = new Periodo(dataInicioInterrupcao, dataFimInterrupcao, null);
+					i++;
+				}
+
+				calculadoraPrescricaoObjeto.listaInterrupcao = listaInterrupcao;
+
+				var listaRemicao = new Array();
+
+				i = 0;
+				while (document.getElementById('remicao_' + i) != null)
+				{
+					var qtdDiaRemicao = new Number(document.getElementById('remicao_' + i).value);
+					listaRemicao[i] = new Remicao(qtdDiaRemicao);
+					i++;
+				}
+
+				calculadoraPrescricaoObjeto.listaRemicao = listaRemicao;
+
+				calculadoraPrescricaoObjeto.dataUltimaFuga = converterDataStringEmDataObjeto(document.getElementById('dataUltimaFuga').value);
+				
+				var listaCondenacao = new Array();
+
+				i = 0;
+				while (document.getElementById('gravidade_' + i) != null)
+				{
+					var condenacao = new Condenacao();
+					
+					var gravidade = document.getElementById('gravidade_' + i).value; 
+					
+					if (gravidade == "")
+					{
+						condenacao.gravidade = new Number(1);
+						document.getElementById('gravidade_' + i).value = '1'; 
+					}
+					else
+					{
+						condenacao.gravidade = new Number(gravidade);
+					}	
+					condenacao.descricaoProcesso = document.getElementById('descricaoProcessoCondenacao_' + i).value;
+					var anoPenaImposta = document.getElementById('anoPenaImpostaCondenacao_' + i).value;
+					var mesPenaImposta = document.getElementById('mesPenaImpostaCondenacao_' + i).value;
+					var diaPenaImposta = document.getElementById('diaPenaImpostaCondenacao_' + i).value;
+
+					if (anoPenaImposta == "")
+					{
+						anoPenaImposta = new Number(0);
+					}
+
+					if (mesPenaImposta == "")
+					{
+						mesPenaImposta = new Number(0);
+					}
+
+					if (diaPenaImposta == "")
+					{
+						diaPenaImposta = new Number(0);
+					}
+
+					var anoMesDiaPenaImposta = new AnoMesDia(anoPenaImposta, mesPenaImposta, diaPenaImposta);
+					condenacao.anoMesDiaPenaImposta = anoMesDiaPenaImposta;
+
+					condenacao.dataCondenacao = converterDataStringEmDataObjeto(document.getElementById('dataCondenacao_' + i).value);
+					condenacao.dataFato = converterDataStringEmDataObjeto(document.getElementById('dataFatoCondenacao_' + i).value);
+					condenacao.dataSentenca = converterDataStringEmDataObjeto(document.getElementById('dataSentencaCondenacao_' + i).value);
+					condenacao.faixaEtaria = document.getElementById('faixaEtariaCondenacao_' + i).value;
+					condenacao.ehReincidente = (document.getElementById('ehReincidenteCondenacao_' + i).value == 'sim' ? true:false);
+					
+					listaCondenacao[i] = condenacao;
+					i++;
+				}
+				calculadoraPrescricaoObjeto.listaCondenacao = listaCondenacao;
+
+                document.getElementById('totalDetracao').innerHTML = '(' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalDetracao()) + ')';
+                document.getElementById('totalInterrupcao').innerHTML = '(' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalInterrupcao()) + ')';                
+                document.getElementById('totalRemicao').innerHTML = '(' + calculadoraPrescricaoObjeto.calcularTotalRemicao() + ' dia(s))' ;                                
+
+				// falta o total
+				atualizarPenaCumprida();
+
+
+			}
+
+
+
+						
+			function calcularPrescricao()
+			{
+				recarregarObjeto();
+			
+				if (!validarCampos())
+				{
+					permiteImprimir = false;				
+					return;
+				
+				}
+				
+				calculadoraPrescricaoObjeto.calcularPenaCumpridaCadaCondenacao();
+				
+				calculadoraPrescricaoObjeto.calcularDataValidade();
+				
+				
+				
+				// Atualiza as datas de validade
+				for (var i = 0; i < calculadoraPrescricaoObjeto.listaCondenacao.length; i++)
+				{
+					if (calculadoraPrescricaoObjeto.listaCondenacao[i].dataValidade != null)
+					{
+						document.getElementById('dataValidadeCondenacao_' + i).innerHTML = imprimirData(calculadoraPrescricaoObjeto.listaCondenacao[i].dataValidade);
+						document.getElementById('situacaoCondenacao_' + i).innerHTML = calculadoraPrescricaoObjeto.listaCondenacao[i].situacao;
+						document.getElementById('prazoPrescricionalCondenacao_' + i).innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.listaCondenacao[i].anoMesDiaPrazoPrescricional);
+						document.getElementById('restantePenaCondenacao_' + i).innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.listaCondenacao[i].calcularPenaRestante());	
+					}
+					else
+					{
+						//document.getElementById('dataValidadeCondenacao_' + i).innerHTML = imprimirData(calculadoraPrescricaoObjeto.listaCondenacao[i].dataValidade);
+						document.getElementById('situacaoCondenacao_' + i).innerHTML = calculadoraPrescricaoObjeto.listaCondenacao[i].situacao;
+						document.getElementById('prazoPrescricionalCondenacao_' + i).innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.listaCondenacao[i].anoMesDiaPrazoPrescricional);
+						document.getElementById('restantePenaCondenacao_' + i).innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.listaCondenacao[i].calcularPenaRestante());	
+					}
+				}
+				//document.getElementById('dataBase').innerHTML = imprimirData(calculadoraPrescricaoObjeto.dataBase);
+				
+				if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_sim')
+				{
+					document.getElementById('penaCumprida').innerHTML = '(Data da \u00daltima Fuga - Data In\u00edcio) - Interrup\u00e7\u00e3o + Detra\u00e7\u00e3o + Remi\u00e7\u00e3o + 1d';
+					document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML = '(' + imprimirAnoMesDia(calcularDiferencaData(calculadoraPrescricaoObjeto.dataInicioCumprimento, calculadoraPrescricaoObjeto.dataBase)) + ') - ' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalInterrupcao()) + '+' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalDetracao()) + '+' + calculadoraPrescricaoObjeto.calcularTotalRemicao() + 'd+1d';	
+				}
+				else
+				{
+					document.getElementById('penaCumprida').innerHTML = 'Detra\u00e7\u00e3o';
+					document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalDetracao());	
+				}
+				
+				
+				document.getElementById('anoMesDiaPenaCumprida').innerHTML = imprimirAnoMesDia(calculadoraPrescricaoObjeto.anoMesDiaTotalPenaCumprida);
+				
+				document.getElementById('dataProvavelPrescricaoPena').innerHTML = imprimirData(calculadoraPrescricaoObjeto.calcularDataProvavelPrescricaoPena());
+			
+				//atualizarPenaCumprida();	
+				permiteImprimir = true;				
+				return;				
+			}
+			
+			//Impressao do documento formatado
+			function imprimir()
+			{
+				try
+				{
+					calcularPrescricao();
+					
+					if (permiteImprimir == false)
+						return;
+						
+					var oIframe = document.getElementById('ifrmPrint');
+					var oContent = document.getElementById('formularioImpressao').innerHTML;
+					var oDoc = (oIframe.contentWindow || oIframe.contentDocument);
+					if (oDoc.document) oDoc = oDoc.document;
+					oDoc.write('<head><title>Calculadora de Prescri&ccedil;&atilde;o da Pretens&atilde;o Execut&oacute;ria</title>');
+					oDoc.write('<style type="text/css">');
+					oDoc.write('.paragrafo01');
+					oDoc.write('{');
+					oDoc.write('font-weight: bold;');					
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 10px;');
+					oDoc.write('color: #000000;');
+					oDoc.write('text-align:right;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo02');
+					oDoc.write('{');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 10px;');
+					oDoc.write('color: #000000;');
+					oDoc.write('text-align:left;');
+					oDoc.write('}');
+					oDoc.write('.linhaFundoTabela'); 
+					oDoc.write('{');	
+					oDoc.write('border-bottom-width: 1px;');
+					oDoc.write('border-bottom-style: solid;');
+					oDoc.write('border-bottom-color: #333333;');
+					oDoc.write('cellpadding : 0;');
+					oDoc.write('cellspacing : 0;');	
+					oDoc.write('width : 100%;');				
+					oDoc.write('}');
+					oDoc.write('.tituloSubBSecao');
+					oDoc.write('{'); 
+					oDoc.write('font-family: verdana;'); 
+					oDoc.write('font-size: 12px;'); 
+					oDoc.write('font-weight: bold;'); 
+					oDoc.write('color: #000000;'); 
+					oDoc.write('text-align: left;'); 
+					oDoc.write('border-bottom-width: 1px;');
+					oDoc.write('border-bottom-style: solid;');
+					oDoc.write('border-bottom-color: #333333;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo03');
+					oDoc.write('{');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 12px;');
+					oDoc.write('color: #5173F9;');
+					oDoc.write('text-align:right;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo04'); 
+					oDoc.write('{');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 12px;');
+					oDoc.write('color: #5173F9;');
+					oDoc.write('text-align:left;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo06');
+					oDoc.write('{');
+					oDoc.write('font-weight: bold;');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 12px;');
+					oDoc.write('color: #F27A0D;');
+					oDoc.write('text-align:right;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo07');
+					oDoc.write('{');
+					oDoc.write('font-weight: bold;');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 12px;');
+					oDoc.write('text-align:right;');
+					oDoc.write('}');
+					oDoc.write('.paragrafo08');
+					oDoc.write('{');
+					oDoc.write('font-weight: bold;');
+					oDoc.write('text-indent: 2pt;');
+					oDoc.write('font-family: verdana;');
+					oDoc.write('font-size: 12px;');
+					oDoc.write('text-align:left;');
+					oDoc.write('}');
+					oDoc.write('</style>');
+					oDoc.write('</head><body onload=\'this.focus(); this.print();\'>');
+					oDoc.write('<table>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<th nowrap rowspan="3"><img src="./images/logomarca_cnj.png" alt="Conselho Nacional de Justi&ccedil;a" width="178" height="56"/></th>');
+					oDoc.write('		<td width="100%" style="font-size: 20px;text-align: center;font-weight: bold; font-family: verdana;">Calculadora de Prescri&ccedil;&atilde;o da Pretens&atilde;o Execut&oacute;ria</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td style="font-size: 12px;text-align: center;font-weight: bold; font-family: verdana;">Departamento de Monitoramento e Fiscaliza&ccedil;&atilde;o do Sistema<br>Carcer&aacute;rio e do Sistema de Execu&ccedil;&atilde;o de Medidas Socioeducativas - DMF</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('</table>');
+					oDoc.write('<table class="linhaFundoTabela" width="100%">');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td colspan="3" class="tituloSubBSecao" nowrap>DADOS GERAIS</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Nome do Apenado:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + calculadoraPrescricaoObjeto.nomeSentenciado + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>N&uacute;mero da Execu&ccedil;&atilde;o:</td>');
+					oDoc.write('		<td class="paragrafo02">' + calculadoraPrescricaoObjeto.numeroExecucao + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Data de Nascimento:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(calculadoraPrescricaoObjeto.dataNascimento) + '&nbsp;&nbsp;' + document.getElementById('idadeAtual').innerHTML + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>O apenado j&aacute; iniciou o cumprimento da pena?:</td>');
+					if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_sim')
+					{
+					oDoc.write('		<td class="paragrafo02">Sim</td>');
+					}
+					if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_nao')
+					{
+					oDoc.write('		<td class="paragrafo02">N&atilde;o</td>');
+					}
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					var anoMesDiaTotalDetracao = calculadoraPrescricaoObjeto.calcularTotalDetracao();
+					if (anoMesDiaTotalDetracao.ano != 0 || anoMesDiaTotalDetracao.mes != 0 || anoMesDiaTotalDetracao.dia != 0)
+					{
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Detra&ccedil;&otilde;es:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirListaPeriodo(calculadoraPrescricaoObjeto.listaDetracao, 'detracao') + '</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Total Detra&ccedil;&otilde;es:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalDetracao()) + '</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					}
+					if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_sim')
+					{
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Data de In&iacute;cio de cumprimento da pena:</td>');
+					oDoc.write('		<td class="paragrafo02">' + imprimirData(calculadoraPrescricaoObjeto.dataInicioCumprimento) + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					var anoMesDiaTotalInterrupcao = calculadoraPrescricaoObjeto.calcularTotalInterrupcao();
+					if (anoMesDiaTotalInterrupcao.ano != 0 || anoMesDiaTotalInterrupcao.mes != 0 || anoMesDiaTotalInterrupcao.dia != 0)
+					{
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Interrup&ccedil;&otilde;es:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirListaPeriodo(calculadoraPrescricaoObjeto.listaInterrupcao, 'interrupcao') + '</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Total Interrup&ccedil;&otilde;es:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(calculadoraPrescricaoObjeto.calcularTotalInterrupcao()) + '</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					}
+					var totalRemicao = calculadoraPrescricaoObjeto.calcularTotalRemicao();
+					if (totalRemicao != 0)
+					{
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Remi&ccedil;&otilde;es:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + calculadoraPrescricaoObjeto.calcularTotalRemicao()  + ' dia(s)</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					}
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Data da &Uacute;ltima Fuga:</td>');
+					oDoc.write('		<td class="paragrafo02">' + imprimirData(calculadoraPrescricaoObjeto.dataUltimaFuga) + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					}
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Pena Cumprida:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('penaCumprida').innerHTML + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>&nbsp;</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('detalheCalculoPenaCumpridaResultado').innerHTML + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_sim')
+					{
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Pena Cumprida at&eacute; a Data da &Uacute;ltima Fuga:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('anoMesDiaPenaCumprida').innerHTML + '</td>');
+					oDoc.write('        <td width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					}
+					oDoc.write('</table>');
+					oDoc.write('<table class="linhaFundoTabela" width="100%">');
+					for (var i = 0; i < calculadoraPrescricaoObjeto.listaCondenacao.length; i++)
+					{
+						var condenacao = calculadoraPrescricaoObjeto.listaCondenacao[i];
+						oDoc.write('	<tr>');
+						oDoc.write('		<td class="paragrafo01">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo01">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo01">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+						oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+						oDoc.write('	</tr>');
+						oDoc.write('	<tr>');
+						oDoc.write('		<td colspan="7" class="tituloSubBSecao" nowrap>Condena&ccedil;&atilde;o - ' + document.getElementById('situacaoCondenacao_' + i).innerHTML + '</td>');
+						oDoc.write('	</tr>');
+						
+						oDoc.write('	<tr>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Gravidade:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + condenacao.gravidade + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Processo:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + condenacao.descricaoProcesso + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Pena:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirAnoMesDia(condenacao.anoMesDiaPenaImposta) + '</td>');
+						oDoc.write('        <td width="100%">&nbsp;</td>');
+						oDoc.write('	</tr>');
+
+						oDoc.write('	<tr>');
+						
+						if (calculadoraPrescricaoObjeto.sentenciadoPreso == 'preso_sim')
+						{
+						oDoc.write('		<td class="paragrafo01" nowrap>Data de In&iacute;cio da Condena&ccedil;&atilde;o:</td>');
+						}
+						else
+						{
+						oDoc.write('		<td class="paragrafo01" style="font-size:8px;" nowrap >Data do Tr&acirc;nsito em Julgado da <br>Senten&ccedil;a Condenat&oacute;ria para a Acusa&ccedil;&atilde;o <br>e/ou Data de Revoga&ccedil;&atilde;o da <br>Suspens&atilde;o Condicional da Pena:</td>');
+						}
+						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(condenacao.dataCondenacao) + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Data do Fato:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(condenacao.dataFato) + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Data da Senten&ccedil;a:</td>');
+						
+						oDoc.write('		<td class="paragrafo02" nowrap>' + imprimirData(condenacao.dataSentenca) + '</td>');
+						
+						oDoc.write('        <td width="100%">&nbsp;</td>');
+						oDoc.write('	</tr>');
+
+						oDoc.write('	<tr>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Idade:</td>');
+						if (condenacao.faixaEtaria == 'menor21') 
+						{
+						oDoc.write('		<td class="paragrafo02" nowrap>&lt;21</td>');
+						}
+						else if (condenacao.faixaEtaria == 'maior21Menor70') 
+						{
+						oDoc.write('		<td class="paragrafo02" nowrap>&gt;=21 e &lt;=70</td>');
+						}
+						else if (condenacao.faixaEtaria == 'maior70') 						
+						{
+						oDoc.write('		<td class="paragrafo02" nowrap>&gt;70</td>');
+						}
+						oDoc.write('		<td class="paragrafo01" nowrap>Reincidente:</td>');
+						if (condenacao.ehReincidente == true)
+						{
+						oDoc.write('		<td class="paragrafo02" nowrap>Sim</td>');
+						}
+						else if (condenacao.ehReincidente == false)
+						{
+						oDoc.write('		<td class="paragrafo02" nowrap>N&atilde;o</td>');
+						}
+						oDoc.write('		<td class="paragrafo01" nowrap>Pena Remanescente:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('restantePenaCondenacao_' + i).innerHTML + '</td>');
+						oDoc.write('        <td width="100%">&nbsp;</td>');
+						oDoc.write('	</tr>');
+						oDoc.write('	<tr>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Prazo Prescricional:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('prazoPrescricionalCondenacao_' + i).innerHTML + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Validade/F&oacute;rmula:</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('dataValidadeCondenacao_' + i).innerHTML + '</td>');
+						oDoc.write('		<td class="paragrafo01" nowrap>Situa&ccedil;&atilde;o</td>');
+						oDoc.write('		<td class="paragrafo02" nowrap>' + document.getElementById('situacaoCondenacao_' + i).innerHTML + '</td>');
+						oDoc.write('        <td width="100%">&nbsp;</td>');
+						oDoc.write('	</tr>');
+					}
+					oDoc.write('</table>');										
+					oDoc.write('<table class="linhaFundoTabela" width="100%">');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01">&nbsp;</td>');
+					oDoc.write('		<td class="paragrafo02">&nbsp;</td>');
+					oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td colspan="3" class="tituloSubBSecao" nowrap>OUTRAS INFORMA&Ccedil;&Otilde;ES</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Data Prov&aacute;vel de Prescri&ccedil;&atilde;o:</td>');
+					oDoc.write('		<td class="paragrafo02">' + document.getElementById('dataProvavelPrescricaoPena').innerHTML + '</td>');
+					oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" style="vertical-align: text-top;" nowrap>Observa&ccedil;&atilde;o:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + document.calculoPrescricao.observacaoDocumento.value + '</textarea></td>');
+					oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Data:</td>');
+					oDoc.write('		<td class="paragrafo02" nowrap>' + document.calculoPrescricao.dataDocumento.value + '</td>');
+					oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');
+					oDoc.write('	<tr>');
+					oDoc.write('		<td class="paragrafo01" nowrap>Elaborado Por:</td>');
+					oDoc.write('		<td class="paragrafo02">' + document.calculoPrescricao.nomeDonoDocumento.value + '</td>');
+					oDoc.write('		<td class="paragrafo02" width="100%">&nbsp;</td>');
+					oDoc.write('	</tr>');					
+					oDoc.write('</table>');					
+					oDoc.close();
+				}   
+				catch(e)
+				{
+					self.print();
+				}
+			}			
+			
+			
+		</script>
+		
+		<!-- CLASSES DE APOIO -->
+		<script>
+		
+
+			var ERRO= false;
+			var LAST_FIELD;
+			var ehCpf = false;
+			var ehCgc = false;
+
+			///////////////////////////////////////////////////////////////////////////////
+			//CONSTANTES UTILIZADAS
+			///////////////////////////////////////////////////////////////////////////////
+			SIZE_DATE = 8;
+			SIZE_TIME = 6;
+			SIZE_CEP = 8
+			SIZE_ACCOUNT = 7;
+			SIZE_AG_ACCOUNT = 11;
+			MAX_NUMERIC = Number.MAX_VALUE; //Este n&atilde;o vai ser usado, mas s\u00f3 pra saber !!!
+			SIZE_MONEY = 10; //9999999.99
+			SIZE_CPF_CNPJ =14;
+			SIZE_CPF = 11;
+			SIZE_PERCENT =6;
+			SIZE_BRANCH =4;
+			SIZE_MONTH_YEAR= 6;
+			
+			function showError(msgInfra, msgUsuario)
+			{
+				if( msgUsuario != "")
+					alert(msgUsuario);
+				else
+					alert(msgInfra);
+			}
+
+			function focusCamp(campo)
+			{
+				if( navigator.appName.indexOf("Netscape") != -1)  // E' Netscape?
+				{
+					campo.value= "";
+				}else{
+					campo.focus();
+				}
+				ERRO= true;
+			}
+
+			function formatDate( el, mensErro )
+			{
+				var valor= new String(el.value);
+				LAST_FIELD= el;
+				
+				if( !isNumeric(valor))
+				{
+					alert("Voc\u00ea deve digitar a data utilizando apenas n�meros.\n" +
+							"Utilize 2 d\u00edgitos para o dia, 2 d\u00edgitos para o m\u00eas e " +
+								"4 d\u00edgitos para o ano (DDMMYYYY)\n"); 
+					focusCamp(el);
+					return false;
+				}
+				if (!isDate(el))
+				{
+					showError('Data Invalida.\n\nPor favor, redigite-a.',mensErro);
+					focusCamp(el);
+					return false;
+				}
+				ERRO= false;
+				return true;
+			}
+			
+			function isNumeric( value)
+			{
+				var reNumeric= new RegExp("[0-9]");
+				return reNumeric.test(value);
+			}
+			
+			
+			function formatCamp(campo, tipo, par1, par2, par3) 
+			{
+				var numArgs= formatCamp.arguments.length;
+				if( campo == null || String(campo.value) == "")
+				{
+					return false;
+				}
+				if( numArgs == 2)
+					par1= "";
+				if( tipo == "account")
+					return formatAccount(campo,par1);
+				else if( tipo == "branch")
+					return formatBranch(campo,par1);
+				else if( tipo == "ag_account")
+					return formatAg_Account(campo,par1);
+				else if( tipo == "cpfcnpj")
+					return formatCPF(campo,par1);
+				else if( tipo == "yearmonth")	
+					return formatYearMonth( campo,par1);
+				else if( tipo == "date")	
+					return formatDate( campo,par1);
+				else if( tipo == "time")	
+					return formatTime( campo,par1);
+				else if( tipo == "money")
+					return formatMoney(campo,par1);
+				else if( tipo == "numeric")
+					return formatNumeric(campo,par1);
+				else if( tipo == "cep")
+					return formatCEP(campo,par1);
+				else if( tipo == "email")
+					return formatEmail(campo,par1);
+				else if( tipo == "percent")
+					return formatPercent(campo,par1);
+				else if( tipo == "month_year")
+						formatMonthYear(campo);
+				else if( tipo == "interval")
+				{
+					if( numArgs <= 4)
+						par3= "";
+					return formatInterval(campo, par1, par2, par3);
+				}
+				else if( tipo == "text")
+					return formatText(campo,par1);
+				else if( tipo == "alfanumeric")
+					return formatAlfaNumeric(campo,par1);
+				else
+					alert( "Tipo passado para formata\u00e7\u00e3o \u00e9 inv\u00e1lido: " + tipo);
+				return false;
+			}
+			
+			function removeCaracs(Campo, tipo)
+			{
+				wrkCampo = '';
+				var type= ""; 
+				var caracter= "", ok= false;
+
+				if( removeCaracs.arguments.length < 2)
+					type= new String("default");
+				else
+					type= new String(tipo);
+				if( type == "email")
+				{
+					focusNetscape(Campo);
+					return;
+				}
+
+				vr = Campo.value;
+				for ( i=0; i < vr.length; i++ )
+				{
+					caracter = vr.substring(i,i+1);
+					if( type != "text" && type != "money")
+						ok= ( caracter != '.' && caracter != '/' && caracter != ':' && caracter != '-' && caracter != ' ' && caracter != '%');
+					else if (type == "money")
+					{
+						ok= ( caracter != '.' && caracter != '/' && caracter != ':' && caracter != ' ' && caracter != '%');
+					}
+					else 
+						ok= isAlfa( caracter);
+
+					if( ok)
+						wrkCampo += caracter;
+				}
+				Campo.value = wrkCampo;
+				focusNetscape(Campo);
+			}
+			
+			function validaConteudo(event, el, tipo )
+			{
+				var key;
+				if (event.which)
+				{
+					key = String.fromCharCode( event.which );
+				}else{
+					if (event.keyCode == 9 )
+						return true;
+				
+					key = String.fromCharCode( event.keyCode );
+				}
+				
+				
+				
+				if (event.which && event.which == 8 )
+					return true;
+
+				if (event.which && event.which == 9 )
+					return true;
+
+				if( tipo == "money" || tipo == "percent")		
+				{
+					if(validaNumerico(key))	
+					{
+						return true;
+					}
+					else
+					{ 
+						if ((key == ","))
+						{
+							return (el.value.indexOf(",") == -1);
+						}
+						else if ((key == "-"))
+						{
+							if (el.value.length == 0)
+							{
+								return true;
+							}
+							else
+							{
+								return false;
+							}
+						}
+						else
+						{
+							return false;
+						}
+					}		
+				}
+				else if (tipo == "alfanumeric")
+				{
+					return (isAlfaNumeric(key));
+				}
+				else if( tipo == "text")
+				{
+					return ( isAlfa(key));
+				}
+				else if( tipo == "email")
+				{
+					return true;
+				}
+				else if( tipo == "prioridade")
+				{
+					return validaPrioridade( key );
+				}
+				else
+				{  // todos os outros tipos s\u00f3 aceitam n&uacute;meros
+					return validaNumerico(key);
+				}
+			}
+						
+			function validaNumerico( value )
+			{
+				var strValidos = "0123456789";
+				var valor= new String(value);
+				for( var i=0; i< valor.length; i++)
+				{
+					if( strValidos.indexOf(valor.charAt(i)) == -1)
+						return false;
+				}
+				return true;
+			}
+			
+			function isDate( el )
+			{
+				 var vr = el.value;
+				 //minimo 6, maximo 10
+				 if (vr.length >= 6 && vr.length <= 10)
+				 {
+					 token = new Array();
+					 i = 0;
+					 j = 0;
+					 nBar = 0;
+					 nDig = 0;
+
+					 while (i < vr.length)
+					 {
+						 if (vr.substring(i, i+1) >= '0' && vr.substring(i, i+1) <= '9'){
+							 str = "" + vr.substring(i, i+1);
+							 i++;
+							 while (vr.substring(i, i+1) >= '0' && vr.substring(i, i+1) <= '9' && i < vr.length)
+							 {
+								 str = str + vr.substring(i, i+1);
+								 i++;
+							 }
+							 //alert("numero: " + str);
+							 token[j] = str;
+							 j++;
+							 nDig++;
+						 }else
+						 if (vr.substring(i, i+1) == "/"){
+							 str = "" + vr.substring(i, i+1);
+							 token[j] = str;
+							 j++;
+							 i++;
+							 nBar++;
+
+							 //alert("barra: " + str);
+						 }
+						 else{
+							 //alert("caracter desconhecido: " + vr.substring(i, i+1));
+							 i++;
+						 }
+					 }
+
+					 //verifica quantas barras e digitos foram reconhecidos
+					 //nBar == 0 e nDig == 1  - formato 01012000
+					 //nBar == 2 e nDig == 3  - formato 01/10/2000
+					 //para quaisquer outros formatos n&atilde;o faz formata&ccedil;&atilde;o, ocasionando em erro
+					 if ((nBar == 0 && nDig == 1) || (nBar == 2 && nDig == 3)){
+						 //alert("numero de tokens: " + token.length);
+
+						 if (token.length == 1){ //um token de tamanho minimo 6, maximo 8
+							 dia = token[0].substring(0, 2);
+							 mes = token[0].substring(2, 4);
+
+							 if (token[0].length == 6){
+								 if (eval(token[0].substring(4, 6)) < 30)
+									 ano = "20" + token[0].substring(4, 6);
+								 else
+									 ano = "19" + token[0].substring(4, 6);
+							 }
+							 else
+							 if (token[0].length == 8)
+								 ano = token[0].substring(4, 8);
+							 else
+								 ano = token[0].substring(4, token[0].length);
+
+							 //alert(dia + "/" + mes + "/" + ano);
+							 el.value = dia + "/" + mes + "/" + ano;
+						 }else
+						 if (token.length == 5){ //5 tokens indicam data no formato dd/mm/aa
+							 if (token[0].length == 1 && eval(token[0]) < 10)
+								 dia = "0" + token[0];
+							 else
+								 //pega os dois primeiros digitos e ignora o restante se houver
+								 dia = token[0].substring(0, 2);
+							 barra1 = token[1]; //pega barra
+							 if (token[2].length == 1 && eval(token[2]) < 10)
+								 mes = "0" + token[2];
+							 else
+								 //pega os dois primeiros digitos e ignora o restante se houver
+								 mes = token[2].substring(0, 2);
+
+							 barra2 = token[3]; //pega barra
+
+							 if (token[4].length == 2){
+								 if (eval(token[4]) < 30)
+									 ano = "20" + token[4];
+								 else
+									 ano = "19" + token[4];
+							 }
+							 else
+								 ano = token[4];
+
+							 //alert(dia + barra1 + mes + barra2 + ano);
+
+							 el.value = dia + barra1 + mes + barra2 + ano;
+						 }
+					 }
+				 }
+				 
+				 var err=0;
+				 var psj=0; 
+				 a = el.value;
+
+				 if (a.length != 10)
+					 err=4;
+				 else
+				 {
+					 dia = a.substring(0, 2); // day 
+					 barra1 = a.substring(2, 3); // '/' 
+					 mes = a.substring(3, 5); // month 
+					 barra2 = a.substring(5, 6); // '/' 
+					 ano = a.substring(6, 10); // year 
+			 
+					 //basic error checking 
+					 if (mes < 1 || mes >12) err = 1;
+					 if (barra1 != '/') err = 4;
+					 if (dia < 1 || dia > 31) err = 2;
+					 if (barra2 != '/') err = 4 
+					 if (ano < 1900 || ano > 2100) err = 3 
+					 if (mes == 4 || mes == 6 || mes == 9 || mes == 11){ 
+						 //advanced error checking 
+						 // months with 30 days 
+						 if (dia == 31) err=4 
+					 } 
+					 if (mes == 2){ 
+						 // february, leap year 
+						 // feb 
+						 var g = parseInt(ano/4) 
+						 if (isNaN(g)) { 
+							 err=4 
+						 } 
+						 if (dia > 29) err=4 
+			 
+						 if (dia == 29 && ((ano/4)!=parseInt(ano/4))) err=4 
+					 } 
+				 }
+
+				if (err > 0 && a.length > 0)
+				{
+					 return false;
+				}
+				return true;
+			} 
+
+			
+			function focusNetscape( campo)
+			{
+				if( navigator.appName.indexOf("Netscape") != -1)
+				{
+					if( ERRO )
+					{
+						//debug( "focara' em: " + LAST_FIELD.name );
+						LAST_FIELD.focus(); //LAST_FIELD.focus();
+						ERRO= false; 
+					}
+				}
+			}
+			
+			function imprimirData(data)
+			{
+				if (data == null)
+					return '';
+				var dia = new String(data.getDate());
+				if (dia.length == 1) 
+				{
+					dia = '0' + dia;
+				}
+
+				var mes = new String(data.getMonth() + 1);
+				if (mes.length == 1) 
+				{
+					mes = '0' + mes;
+				}
+
+				return dia + '/' + mes + '/' + data.getFullYear();
+			}
+			
+			function imprimirAnoMesDia(anoMesDia)
+			{
+				if (anoMesDia == null)
+				{
+					return '';
+				}
+				
+				return anoMesDia.ano + 'a' + anoMesDia.mes + 'm' + anoMesDia.dia + 'd';			
+			}
+			
+			//Imprimir na tela uma lista de objetos da classe Periodo
+			function imprimirListaPeriodo(listaPeriodo, tipoPeriodo)
+			{				
+				var stringPeriodo = '';
+				for (var i = 0; i < listaPeriodo.length; i++)
+				{
+					var dataInicioPeriodo = listaPeriodo[i].dataInicio;
+					var dataFimPeriodo = listaPeriodo[i].dataFim;
+					var descricao = listaPeriodo[i].descricao;
+					if (dataInicioPeriodo != null && dataFimPeriodo != null)
+					{
+						if (descricao == null)
+						{
+							// Inclui uma nova linha ap\u00f3s cada per&iacute;odo
+							stringPeriodo += imprimirData(dataInicioPeriodo) + ' \u00e0 ' + imprimirData(dataFimPeriodo);
+						}
+						else
+						{
+							stringPeriodo += imprimirData(dataInicioPeriodo) + ' \u00e0 ' + imprimirData(dataFimPeriodo) + ' - ' + descricao;
+						}
+						
+						
+						var diferencaData = calcularDiferencaData(dataInicioPeriodo, dataFimPeriodo); 
+						if (tipoPeriodo == 'detracao')
+						{
+							diferencaData.dia += 1;
+						}
+						stringPeriodo += ' (' + imprimirAnoMesDia(diferencaData) + ')<br>'
+					}
+				}
+				return stringPeriodo;
+			}
+			
+			
+		</script>
+	</head>
+	<body class="corpo" onload="javascript:limparCampos(false);">
+		<iframe id="ifrmPrint" src="#" style="width:0px; height:0px;"></iframe>
+		<div id="formularioImpressao" class="imprimir">
+			<form name="calculoPrescricao">
+				<table>
+					<tr>
+						<!--<th rowspan="3"><img src="/image/image_gallery?img_id=1835785&amp;t=1289562184678" alt="Conselho Nacional de Justi&ccedil;a"/></th>-->
+						<th rowspan="3"><img src="./images/logomarca_cnj.png" alt="Conselho Nacional de Justi&ccedil;a"/></th>
+						<td width="40%" nowrap style="font-size: 20px;text-align: center;font-weight: bold; font-family: calibri;">CALCULADORA DE PRESCRI&Ccedil;&Atilde;O DA PRETENS&Atilde;O EXECUT&Oacute;RIA</td>
+						<td width="20%">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="40%" nowrap style="font-size: 12px;text-align: center;font-weight: bold; font-family: calibri;">Departamento de Monitoramento e Fiscaliza&ccedil;&atilde;o do Sistema<br>Carcer&aacute;rio e do Sistema de Execu&ccedil;&atilde;o de Medidas Socioeducativas - DMF</td>
+						<td width="40%">&nbsp;</td>
+						<td width="20%">&nbsp;</td>
+					</tr>
+				</table>
+
+				<table class="linhaFundoTabela">
+					<tbody id="tabelaCorpo">
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td width="100%">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="tituloSubBSecao" nowrap>DADOS GERAIS</td>
+						<td class="paragrafo02">&nbsp;</td>						
+					</tr>
+
+					<tr>
+						<td class="paragrafo01">Nome do Apenado:</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" name="nomeSentenciado" id="nomeSentenciado" type="text" size="50" maxLength="50" value="" onchange="javascript:atualizarNomeSentenciado(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe o nome do sentenciado.<br>Este campo &eacute; apenas para fins de impress&atilde;o.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01">N&uacute;mero da Execu&ccedil;&atilde;o:</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" name="numeroExecucao" id="numeroExecucao" type="text" size="40" maxLength="50" value="" onchange="javascript:atualizarNumeroExecucao(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe o n&uacute;mero da execu&ccedil;&atilde;o do sentenciado.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					
+					<tr>
+						<td class="paragrafo01">Data de Nascimento:</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" id="dataNascimento" name="dataNascimento" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarListaCondenacaoDataNascimento(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe a data de nascimento do sentenciado.<br>A idade influencia diretamente no prazo prescricional, nos termos do artigo 115 do CP.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+							<label for="Idade Atual" id="idadeAtual"></label>&nbsp;&nbsp;
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01">O apenado j&aacute; iniciou o cumprimento da pena?</td>
+						<td class="paragrafo02" nowrap>
+							<select class="paragrafo02" name="sentenciadoPreso" id="sentenciadoPreso" onchange="javascript:atualizarSentenciadoPreso(this);atualizarLabelDataInicioPena();">
+								<option value="">selecione</option>
+								<option value="preso_sim">Sim</option>
+								<option value="preso_nao">N&atilde;o</option>
+							</select>
+						</td>	
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01" nowrap>Detra&ccedil;&otilde;es:</td>
+						<td class="paragrafo02" nowrap>
+							<label for="Total Detração" id="totalDetracao"></label>&nbsp;&nbsp;
+							<a href="javascript:adicionarCampoDetracaoInterrupcao('campoDetracao')">Adicionar Campos de Detra&ccedil;&atilde;o</a>
+							<span href="#" onMouseover="mostrarHint('Clique neste link para adicionar as detra&ccedil;&otilde;es do sentenciado.<br>Podem ser adicionadas tantas detra&ccedil;&otilde;es quantas forem necess&aacute;rias.<br>Informe o(s) per&iacute;odo(s) de detra&ccedil;&atilde;o no formato dia/m&ecirc;s/ano. A detra&ccedil;&atilde;o corresponde ao per&iacute;odo em que o r&eacute;u ficou preso provisoriamente.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="linhaDetracao_0">
+						<td class="paragrafo01" nowrap>&nbsp;</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" id="dataInicioDetracao_0" name="dataInicioDetracao_0" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarListaDetracao(this);"/> &agrave; <input class="formularios" id="dataFimDetracao_0" name="dataFimDetracao_0" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarListaDetracao(this);"/>
+							<input class="formularios" name="descricaoProcessoDetracao_0" id="descricaoProcessoDetracao_0" type="text" size="10" maxLength="20" value="" onchange="javascript:atualizarListaDetracao(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe o n&uacute;mero do processo de conhecimento.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+							<input class="botao" type="button" name="botaoExcluirDetracao_0" id="botaoExcluirDetracao_0" value="Excluir" onclick="javascript:excluirCampoDetracaoInterrupcao(this);"/>
+							<span href="#" onMouseover="mostrarHint('Clique no bot&atilde;o Excluir para remover uma detra&ccedil;&atilde;o j&aacute; informada.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+							<label for="Resultado Período Detração" id="resultadoPeriodoDetracao_0"></label>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="campoDetracao">
+						<td class="paragrafo01">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="linhaDataInicioCumprimento">
+						<td class="paragrafo01"><label for="Data Início Pena" id="labelDataInicioPena">Data de In&iacute;cio de cumprimento da pena:</label></td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularioObrigatorio" id="dataInicioCumprimento" name="dataInicioCumprimento" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event, this, 'numeric'))" onblur="formatCamp(this, 'date');" onchange="javascript:atualizarDataInicioCumprimento(this);" onfocus="removeCaracs(this,'date')" />
+							<span href="#" onMouseover="mostrarHint('Informe a data em que o sentenciado iniciou efetivamente o cumprimento da pena no regime aberto ou a data da pris&atilde;o definitiva nos regimes semiaberto e fechado.<br><b>Obs.:</b> Eventuais per&iacute;odos de recolhimento cautelar anteriores ao efetivo in&iacute;cio de cumprimento dever&atilde;o ser computados como detra&ccedil;&atilde;o.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="divInterrupcao">					
+						<td class="paragrafo01" nowrap>Interrup&ccedil;&otilde;es:</td>
+						<td class="paragrafo02" nowrap>
+							<label for="Total Interrupção" id="totalInterrupcao"></label>&nbsp;&nbsp;
+							<a href="javascript:adicionarCampoDetracaoInterrupcao('campoInterrupcao')">Adicionar Campos de Interrup&ccedil;&atilde;o</a>
+							<span href="#" onMouseover="mostrarHint('Clique neste link para adicionar as interrup&ccedil;&otilde;es do sentenciado.<br>Podem ser adicionadas tantas interrup&ccedil;&otilde;es quantas forem necess&aacute;rias.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="linhaInterrupcao_0">
+						<td class="paragrafo01" nowrap>&nbsp;</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" id="dataInicioInterrupcao_0" name="dataInicioInterrupcao_0" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarListaInterrupcao(this);"/> &agrave; <input class="formularios" id="dataFimInterrupcao_0" name="dataFimInterrupcao_0" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarListaInterrupcao(this);"/>
+							<input class="botao" type="button" name="botaoExcluirInterrupcao_0" id="botaoExcluirInterrupcao_0" value="Excluir" onclick="javascript:excluirCampoDetracaoInterrupcao(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe o(s) per&iacute;odo(s) de interrup&ccedil;&atilde;o no formato dia/m&ecirc;s/ano. Estes per&iacute;odos de interrup&ccedil;&atilde;o devem ser posteriores &agrave; data de in&iacute;cio de seu cumprimento.<br><b>Exemplos:</b> per&iacute;odo foragido (fuga/recaptura), per&iacute;odo de livramento condicional perdido (liberdade do LC/pris&atilde;o), etc.<br>Clique no bot&atilde;o Excluir para remover uma interrup&ccedil;&atilde;o j&aacute; informada.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="campoInterrupcao">
+						<td class="paragrafo01" nowrap>Remi&ccedil;&otilde;es:</td>
+						<td class="paragrafo02" nowrap>
+							<label for="Total Remição" id="totalRemicao"></label>&nbsp;&nbsp;
+							<a href="javascript:adicionarCampoRemicao('campoRemicao')">Adicionar Campos de Remi&ccedil;&atilde;o</a>
+							<span href="#" onMouseover="mostrarHint('Clique neste link para adicionar as remi&ccedil;&otilde;es do sentenciado.<br>Podem ser adicionadas tantas remi&ccedil;&otilde;es quantas forem necess&aacute;rias.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="linhaRemicao_0">
+						<td class="paragrafo01" nowrap>&nbsp;</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" id="remicao_0" name="remicao_0" type="text" size="5" maxLength="5" value="" onkeypress="return(validaConteudo(event, this, 'numeric'))"  onchange="javascript:atualizarListaRemicao(this)"/>
+							<input class="botao" type="button" name="botaoExcluirRemicao_0" id="botaoExcluirRemicao_0" value="Excluir" onclick="javascript:excluirCampoRemicao(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe os dias efetivamente declarados remidos por trabalho ou estudo.<br>Clique no bot&atilde;o Excluir para remover uma remi&ccedil;&atilde;o j&aacute; informada.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="campoRemicao">
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>		
+
+					<tr id="linhaDataUltimaFuga">
+						<td class="paragrafo01">Data da &Uacute;ltima Fuga:</td>
+						<td class="paragrafo02" nowrap>
+							<input class="formularios" id="dataUltimaFuga" name="dataUltimaFuga" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'));" onfocus="removeCaracs(this,'date')" onchange="javascript:atualizarDataUltimaFuga(this);"/>
+							<span href="#" onMouseover="mostrarHint('Informe a data da &uacute;ltima fuga.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+							<label for="Idade Atual" id="idadeAtual"></label>&nbsp;&nbsp;
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>					
+					<tr>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="formulaDetalheCalculoPenaCumprida">
+						<td class="paragrafo03" nowrap>Pena Cumprida = </td>
+						<td class="paragrafo04" nowrap><label for="Pena Cumprida" id="penaCumprida"></label></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="detalheCalculoPenaCumprida">
+						<td class="paragrafo03" nowrap>&nbsp;</td>
+						<td class="paragrafo04" nowrap><label for="Detalhe Cálculo Pena Cumprida" id="detalheCalculoPenaCumpridaResultado"></label></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr id="penaCumpridaAteADataBase">
+						<td class="paragrafo01"><label for="Pena Cumprida Até" id="labelPenaCumpridaAte">Pena Cumprida at&eacute; a Data da &Uacute;ltima Fuga:</label></td>
+						<td class="paragrafo02" nowrap><label for="Ano/Mês/Dia Pena Cumprida" id="anoMesDiaPenaCumprida"></label></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01" nowrap>Condena&ccedil;&otilde;es:</td>
+						<td class="paragrafo02" nowrap>
+							<label for="Total Dias Condenação" id="totalDiasCondenacao"></label>&nbsp;&nbsp;
+							<a href="javascript:adicionarCampoCondenacao('campoCondenacao')">Adicionar Condena&ccedil;&atilde;o</a>
+							<span href="#" onMouseover="mostrarHint('Adicione todas as condena&ccedil;&otilde;es referentes ao sentenciado.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01">&nbsp;</td>
+						<td class="paragrafo02">
+							<table border="1">
+								<thead>
+									<tr>
+										<td class="paragrafo02">Gravidade
+											<span href="#" onMouseover="mostrarHint('Informe um n&uacute;mero indicando a gravidade da condena&ccedil;&atilde;o. O n&uacute;mero mais alto indica uma gravidade mais alta. N&uacute;meros iguais indicam mesma gravidade. </br><b>Exemplo:</b> Condenado a um crime de furto e um crime de roubo, informe 1 para furto e 2 para roubo.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>
+										<td class="paragrafo02">Processo
+											<span href="#" onMouseover="mostrarHint('Informe o n&uacute;mero do processo de conhecimento.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>	
+										<td class="paragrafo02">Pena
+											<span href="#" onMouseover="mostrarHint('No caso de concurso de crimes, a extin&ccedil;&atilde;o da punibilidade incidir&aacute; sobre a pena de cada um, isoladamente, nos termos do artigo 119 do CP e S&uacute;mula 497 do STF.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>
+										<td class="paragrafo02">
+											<div id="divDataInicioCondenacao" style="display:block">
+												<label for="Data Início Condenação" id="labelDataInicioCondenacao">Data de In&iacute;cio da Condena&ccedil;&atilde;o</label>
+												<span href="#" onMouseover="mostrarHint('Informe a data de in&iacute;cio desta condena&ccedil;&atilde;o. Pode ser: a data da pris&atilde;o em flagrante, primeira pris&atilde;o ap&oacute;s o fato, a pris&atilde;o definitiva ou a data de in&iacute;cio de cumprimento', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>											
+											<div id="divDataTransitoJulgadoAcusacao" style="display:none">
+												<label for="Data Trânsito em Julgado Acusação" id="labelDataTransitoJulgadoAcusacao">Data do Tr&acirc;nsito em Julgado da Senten&ccedil;a Condenat&oacute;ria para a Acusa&ccedil;&atilde;o e/ou Data de Revoga&ccedil;&atilde;o da Suspens&atilde;o Condicional da Pena</label>
+												<span href="#" onMouseover="mostrarHint('Informe a Data do Tr&acirc;nsito em Julgado da Senten&ccedil;a Condenat&oacute;ria para a Acusa&ccedil;&atilde;o e/ou Data de Revoga&ccedil;&atilde;o da Suspens&atilde;o Condicional da Pena', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>											
+										</td>
+										<td class="paragrafo02">Data do Fato</td>
+										<td class="paragrafo02">Data da Senten&ccedil;a</td>										
+										<td class="paragrafo02">Idade
+											<span href="#" onMouseover="mostrarHint('Informe a idade do r&eacute;u:<br> - Se a idade do r&eacute;u na data do fato era menor do que 21 anos selecione a op&ccedil;&atilde;o <21.<br> - Se a idade do r&eacute;u na data da senten&ccedil;a era maior que 70 anos selecione a op&ccedil;&atilde;o > 70.<br> - Para outros casos selecione a op&ccedil;&atilde;o >=21 e <=70', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>
+										<td class="paragrafo02">Reincidente
+											<span href="#" onMouseover="mostrarHint('Somente deve ser selecionada a reincid&ecirc;ncia quando reconhecida pelo Juiz da senten&ccedil;a.', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>		
+										<td class="paragrafo02">Pena Remanescente
+											<div id="divPenaRemanescenteCondenacao" style="display:block">
+												<span href="#" onMouseover="mostrarHint('C&Aacute;LCULO = Total de Cada Condena&ccedil;&atilde;o - Pena Cumprida de cada Condena&ccedil;&atilde;o', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>	
+											<div id="divPenaRemanescenteDataTransitoJulgadoAcusacao" style="display:none">
+												<span href="#" onMouseover="mostrarHint('C&Aacute;LCULO = Total de Cada Condena&ccedil;&atilde;o - Pena Cumprida at&eacute; a Data do Tr&acirc;nsito em Julgado da Senten&ccedil;a Condenat&oacute;ria para a Acusa&ccedil;&atilde;o e/ou Data de Revoga&ccedil;&atilde;o da Suspens&atilde;o Condicional da Pena', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>		
+										</td>		
+										<td class="paragrafo02">Prazo Prescricional
+											<span href="#" onMouseover="mostrarHint('<table style=\'font-size:10px\' border=\'1\'><tr><td><b>Pena m&aacute;xima em abstrato ou pena em concreto</b></td><td><b>Prazo Inicial</b></td><td><b>Menoridade</b></td><td><b>Reincid&ecirc;ncia</b></td><td><b>Reincidente e Menor</b></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>Redu&ccedil;&atilde;o de 1/2</td><td>Aumento de 1/3</td> <td>Aumento de 1/3 e Redu&ccedil;&atilde;o de 1/2</td> </tr> <tr> <td nowrap>Menor que 01 ano</td> <td>02 anos (Se data do fato/senten&ccedil;a anterior a 06/05/2010)</td> <td>01 ano</td> <td>02 anos e 08 meses</td> <td>01 ano e 04 meses</td> </tr> <tr> <td nowrap>Menor que 01 ano</td> <td>03 anos (Se data do fato/senten&ccedil;a posterior a 06/05/2010)</td> <td>01 ano e 06 meses</td> <td>04 anos</td> <td>02 anos</td> </tr> <tr> <td>Maior que 01 at&eacute; 02 anos</td> <td>04 anos</td> <td>02 anos</td> <td>05 anos e 04 meses</td> <td>02 anos e 08 meses</td> </tr> <tr> <td>Maior que 02 at&eacute; 04 anos</td> <td>08 anos</td> <td>04 anos</td> <td>10 anos e 08 meses</td> <td>05 anos e 04 meses</td> </tr> <tr> <td>Maior que 04 at&eacute; 08 anos</td> <td>12 anos</td> <td>06 anos</td> <td>16 anos</td> <td>08 anos</td> </tr> <tr> <td>Maior que 08 at&eacute; 12 anos</td> <td>16 anos</td> <td>08 anos</td> <td>21 anos e 04 meses</td> <td>10 anos e 08 meses</td> </tr> <tr> <td>Maior que 12 anos</td> <td>20 anos</td> <td>10 anos</td> <td>26 anos e 08 meses</td> <td>13 anos e 04 meses</td> </tr> </table>', this, event, '415px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+										</td>	
+										<td class="paragrafo02">Validade/F&oacute;rmula
+											<div id="divValidadeFormulaCondenacao" style="display:block">										
+												<span href="#" onMouseover="mostrarHint('C&Aacute;LCULO = Data da &Uacute;ltima Fuga + Inciso do artigo 109 do C&oacute;digo Penal Correspondente ao quantum da Pena Remanescente de cada Condena&ccedil;&atilde;o', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>	
+											<div id="divValidadeFormulaTransitoJulgadoAcusacao" style="display:none">
+												<span href="#" onMouseover="mostrarHint('C&Aacute;LCULO = Data do Tr&acirc;nsito em Julgado da Senten&ccedil;a Condenat&oacute;ria para a Acusa&ccedil;&atilde;o e/ou Data de Revoga&ccedil;&atilde;o da Suspens&atilde;o Condicional da Pena + Inciso do artigo 109 do C&oacute;digo Penal Correspondente ao quantum da Pena Remanescente de cada Condena&ccedil;&atilde;o', this, event, '250px')"><img alt="" width="15px" height="15px" src="./images/ajuda.png"></span>
+											</div>		
+										</td>
+										<td class="paragrafo02">Situa&ccedil;&atilde;o</td>
+										<td class="paragrafo02">&nbsp;</td>
+									</tr>
+								</thead>
+								<tbody id="tabelaCorpoCondenacao">
+									<tr id="linhaCondenacao_0">
+										<td class="paragrafo02" nowrap>
+											<input class="formularioObrigatorio" name="gravidade_0" id="gravidade_0" type="text" value="1" size="3" maxlength="3" onkeypress="return(validaConteudo(event, this, 'numeric'))"  onchange="javascript:atualizarListaCondenacao(this);"/>
+										</td>
+										<td class="paragrafo02">
+											<input class="formularios" id="descricaoProcessoCondenacao_0" name="descricaoProcessoCondenacao_0" type="text" size="10" maxlength="20" value="" onchange="javascript:atualizarListaCondenacao(this);"/>
+										</td>
+										<td class="paragrafo02" nowrap>
+											<input class="formularioObrigatorio" name="anoPenaImpostaCondenacao_0" id="anoPenaImpostaCondenacao_0" type="text" value="0" size="3" maxlength="3" onkeypress="return(validaConteudo(event, this, 'numeric'))"  onchange="javascript:atualizarListaCondenacao(this);"/>a<input class="formularioObrigatorio" name="mesPenaImpostaCondenacao_0" id="mesPenaImpostaCondenacao_0" type="text" value="0" size="2" maxlength="2" onkeypress="return(validaConteudo(event, this, 'numeric'))" onchange="javascript:atualizarListaCondenacao(this);"/>m<input class="formularioObrigatorio" name="diaPenaImpostaCondenacao_0" id="diaPenaImpostaCondenacao_0" type="text" value="0" size="2" maxlength="2" onkeypress="return(validaConteudo(event, this, 'numeric'))" onchange="javascript:atualizarListaCondenacao(this);"/>d
+										</td>
+										<td class="paragrafo02"><input class="formularioObrigatorio" id="dataCondenacao_0" name="dataCondenacao_0" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event, this, 'numeric'))" onblur="formatCamp(this, 'date');" onfocus="javascript:removeCaracs(this,'date');" onchange="javascript:atualizarListaCondenacao(this);"/></td>
+										<td class="paragrafo02"><input class="formularioObrigatorio" id="dataFatoCondenacao_0" name="dataFatoCondenacao_0" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event, this, 'numeric'))" onblur="formatCamp(this, 'date');" onfocus="javascript:removeCaracs(this,'date');" onchange="javascript:atualizarListaCondenacao(this);"/></td>
+										<td class="paragrafo02"><input class="formularioObrigatorio" id="dataSentencaCondenacao_0" name="dataSentencaCondenacao_0" type="text" value="" maxlength="8" size="12" onkeypress="return(validaConteudo(event, this, 'numeric'))" onblur="formatCamp(this, 'date');" onfocus="javascript:removeCaracs(this,'date');" onchange="javascript:atualizarListaCondenacao(this);"/></td>										
+										<td class="paragrafo02">
+											<select class="paragrafo02" name="faixaEtariaCondenacao_0" id="faixaEtariaCondenacao_0" onchange="javascript:atualizarListaCondenacao(this);">
+												<option value="">selecione</option>
+												<option value="menor21"><21</option>
+												<option value="maior21Menor70">>=21 e <=70</option>
+												<option value="maior70">>70</option>
+											</select>
+										</td>	
+										<td class="paragrafo02">
+											<select class="paragrafo02" name="ehReincidenteCondenacao_0" id="ehReincidenteCondenacao_0" onchange="javascript:atualizarListaCondenacao(this);">
+												<option value="">selecione</option>
+												<option value="sim">Sim</option>
+												<option value="nao">N&atilde;o</option>
+											</select>
+										</td>											
+										<td class="paragrafo02"><label for="Restante Pena Condenação" id="restantePenaCondenacao_0">0a0m0d</label></td>
+										<td class="paragrafo02"><label for="Prazo Prescricional Condenação" id="prazoPrescricionalCondenacao_0">0a0m0d</label></td>
+										<td class="paragrafo02"><label for="Data Validade Condenação" id="dataValidadeCondenacao_0">&nbsp;</label></td>
+										<td class="paragrafo02"><label for="Situação Condenação" id="situacaoCondenacao_0">Sem Situa&ccedil;&atilde;o</label></td>
+										<td class="paragrafo02"><input class="botao" id="botaoExcluirCondenacao_0" name="botaoExcluirCondenacao_0" type="button" value="Excluir" onclick="javascript:excluirCampoCondenacao(this);"/></td>
+									</tr>
+									
+									<tr id="campoCondenacao">
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="tituloSubBSecao" nowrap>PRESCRI&Ccedil;&Atilde;O DA PENA</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo06">Data Prov&aacute;vel:</td>
+						<td class="paragrafo02" nowrap><label for="Data Provável Prescrição Pena" class="paragrafo07" id="dataProvavelPrescricaoPena"></label></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>					
+					
+					<tr>
+						<td colspan="2" class="tituloSubBSecao" nowrap>&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01" nowrap>Observa&ccedil;&atilde;o:</td>
+						<td class="paragrafo02" nowrap><input class="formularios" name="observacaoDocumento" type="text" value="" size="100" maxLength="100"/></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td class="paragrafo01" nowrap>Data:</td>
+						<td class="paragrafo02" nowrap><input class="formularios" name="dataDocumento" id="dataDocumento" type="text" value="" maxLength="8" size="12" onkeypress="return(validaConteudo(event))" onblur="return(formatCamp(this, 'date'))" onfocus="removeCaracs(this,'date')"/></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="paragrafo01" nowrap>Elaborado Por:</td>
+						<td class="paragrafo02"><input class="formularios" name="nomeDonoDocumento" type="text" size="50" maxLength="50" value=""/></td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="tituloSubBSecao" nowrap>&nbsp;</td>
+						<td class="paragrafo02">&nbsp;</td>
+					</tr>				
+
+					</tbody>
+				</table>
+				
+				<table class="tabelaCabecalho">				
+					<tr>
+						<td nowrap class="textoComum">
+							<!--<a href="javascript:calcularPrescricao();"><img alt="" src="./images/calcular.png" width="20" height="20" border="0">Calcular Pena</a>-->
+							<a href="javascript:calcularPrescricao();"><img alt="" src="./images/calcular.png" width="20" height="20" border="0">Calcular Prescri&ccedil;&atilde;o</a>
+						</td>						
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td nowrap class="textoComum">
+							<!-- <a href="javascript:limparCampos();"><img alt="" src="./images/limpar.png" width="20" height="20" border="0">Limpar Campos</a>-->
+							<a href="javascript:limparCampos(true);"><img alt="" src="./images/limpar.png" width="20" height="20" border="0">Limpar Campos</a>
+						</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td nowrap="" class="textoComum">
+							<!--<a href="javascript:imprimir();"><img alt="" src="/image/image_gallery?img_id=1836107&t=1289562758212" width="20" height="20" border="0">Imprimir</a>-->
+							<a href="javascript:imprimir();"><img alt="" width="20" height="20" border="0" src="./images/imprimir.png">Imprimir</a>
+						</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td class="paragrafo02" width="100%">&nbsp;</td>
+					</tr>
+				</table>
+				
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td width="100%" nowrap style="font-size: 11px;text-align: center;font-family: calibri;"><b>Desenvolvido por:</b><br>Divis&atilde;o de An&aacute;lise e Desenvolvimento de Sistemas Judiciais<br>Departamento de Tecnologia da Informa&ccedil;&atilde;o e Comunica&ccedil;&atilde;o<br>Tribunal de Justi&ccedil;a do Paran&aacute;<br><b>Vers&atilde;o 1.0</b></td>
+						</tr>
+					</tbody>	
+				</table>
+				
+			</form>
+		</div>
+	</body>
+</hmtl>
